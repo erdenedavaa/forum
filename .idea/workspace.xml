@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +24,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
@@ -142,13 +145,47 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.ThreadsTest.a_user_can_read_a_single_thread">
+    <configuration name="ThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadsTest.a_user_can_browse_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="a_user_can_browse_threads" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadsTest.a_user_can_read_a_single_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="a_user_can_read_a_single_thread" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadsTest.a_user_can_view_all_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="a_user_can_view_all_threads" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.ThreadsTest.a_user_can_read_a_single_thread" />
+        <item itemvalue="PHPUnit.ThreadsTest.a_user_can_view_all_threads" />
+        <item itemvalue="PHPUnit.ThreadsTest" />
+        <item itemvalue="PHPUnit.ThreadsTest.a_user_can_browse_threads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -158,7 +195,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="1379000" />
+      <workItem from="1597575512449" duration="5641000" />
     </task>
     <servers />
   </component>
@@ -166,13 +203,41 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597575802791">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597661295603">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597575802791" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597576402294">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1597661295603" />
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597663782879">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597576402294" />
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597663782879" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597663782878">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597663782878" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597663782878">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597663782878" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597663782878">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597663782878" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1597663769958">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597663769958" />
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597662445773">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597662445773" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597663939057">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597663939057" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597664051761">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597664051761" />
   </component>
 </project>
