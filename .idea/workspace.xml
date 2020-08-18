@@ -145,26 +145,27 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager" selected="PHPUnit.ReplyTest.it_has_an_owner">
-    <configuration name="show.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/forum/resources/views/threads/show.blade.php" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="PHPUnit.ParticipateInForumTest.unauthenticated_users_may_not_add_replies">
+    <configuration name="ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInForumTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="an_authenticated_user_may_participate_in_forum_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ReadThreadsTest.a_user_can_read_a_single_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_read_a_single_thread" scope="Method" />
+    <configuration name="ParticipateInForumTest.unauthenticated_users_may_not_add_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInForumTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="unauthenticated_users_may_not_add_replies" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ReadThreadsTest.a_user_can_read_replies_that_are_associated_with_a_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_read_replies_that_are_associated_with_a_thread" scope="Method" />
+    <configuration name="ThreadTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ReadThreadsTest.a_user_can_view_all_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_view_all_threads" scope="Method" />
+    <configuration name="ThreadTest.a_thread_can_add_a_reply" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" method="a_thread_can_add_a_reply" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ReplyTest.it_has_an_owner" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_has_an_owner" scope="Method" />
+    <configuration name="ThreadTest.a_thread_has_a_creator" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" method="a_thread_has_a_creator" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -173,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ReplyTest.it_has_an_owner" />
-        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_read_replies_that_are_associated_with_a_thread" />
-        <item itemvalue="JavaScript Debug.show.blade.php" />
-        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_view_all_threads" />
-        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_read_a_single_thread" />
+        <item itemvalue="PHPUnit.ParticipateInForumTest.unauthenticated_users_may_not_add_replies" />
+        <item itemvalue="PHPUnit.ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" />
+        <item itemvalue="PHPUnit.ThreadTest.a_thread_can_add_a_reply" />
+        <item itemvalue="PHPUnit.ThreadTest" />
+        <item itemvalue="PHPUnit.ThreadTest.a_thread_has_a_creator" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +190,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="11176000" />
+      <workItem from="1597575512449" duration="19481000" />
     </task>
     <servers />
   </component>
@@ -197,41 +198,52 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597664526364">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597718658018">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1597664526364" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597699534073">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1597718658018" />
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597735337952">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597699534073" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597699534072">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597735337952" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597735337951">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597699534072" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597699534072">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597735337951" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597735337951">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597699534072" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597699534073">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597735337951" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597735337952">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597699534073" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1597694801281">
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597735337952" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1597705755528">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597694801281" />
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597705755528" />
     <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597696617136">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597696617136" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597699480159">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597731651211">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597699480159" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597699485160">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597731651211" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597724563246">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597699485160" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597724563246" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
