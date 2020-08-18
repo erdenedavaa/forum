@@ -1,13 +1,13 @@
-<div class="col-md-8">
-    <div class="card mb-2">
-        <h1 class="block my-1 text-lg leading-tight font-semibold text-gray-900 ">
+<div class="col-md-8 mb-2">
+    <div class="card">
+        <div class="card-header">
             <a href="#">
                 {{ $reply->owner->name }}
             </a>
             said {{ $reply->created_at->diffForHumans() }}
-        </h1>
+        </div>
 
-        <div class="panel-body">
+        <div class="card-body">
             {{ $reply->body }}
         </div>
     </div>

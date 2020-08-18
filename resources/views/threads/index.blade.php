@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Forum Threads</div>
 
-                    <div class="panel-body">
+                    <div class="card-body">
                         @foreach ($threads as $thread)
                             <article>
                                 <h4>
