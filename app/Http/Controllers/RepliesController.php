@@ -11,7 +11,12 @@ class RepliesController extends Controller
         $this->middleware('auth');
     }
 
-    public function store(Thread $thread)
+    /**
+     * @param $channeld
+     * @param \App\Thread $thread
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store($channeld, Thread $thread)
     {
         $thread->addReply([
             'body' => request('body'),
@@ -21,3 +26,4 @@ class RepliesController extends Controller
         return back();
     }
 }
+
