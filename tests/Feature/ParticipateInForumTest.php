@@ -28,16 +28,16 @@ class ParticipateInForumTest extends TestCase
     {
         // Given we have a authenticated user
 //        $user = factory('App\User')->create();
-        $this->be($user = factory('App\User')->create());
+        $this->be($user = create('App\User'));
 
         // Controller deer middleware auth hiisen tul daraah baidlaar
         // shuud auth user yysgej bolno.
 
         // And an existing thread
-        $thread = factory('App\Thread')->create();
+        $thread = create('App\Thread');
 
         // When the user adds a reply to the thread
-        $reply = factory('App\Reply')->create();
+        $reply = create('App\Reply');
         $this->post($thread->path() . '/replies', $reply->toArray());
 
         // Then their reply should be visible on the page
