@@ -11,7 +11,8 @@ class ThreadsController extends Controller
      * ThreadsController constructor.
      */
     public function __construct(){
-        $this->middleware('auth')->only('store');
+//        $this->middleware('auth')->only(['create', 'store']);
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
 
@@ -34,7 +35,7 @@ class ThreadsController extends Controller
      */
     public function create()
     {
-        //
+        return view('threads.create');
     }
 
     /**
