@@ -37,7 +37,11 @@
                 <ul class="nav navbar-nav mr-auto">
                     <li class="mr-5"><a href="/threads">All Threads</a></li>
 
-                    <li class="dropdown">
+                    <li class="mr-5">
+                        <a href="/threads/create">New Thread</a>
+                    </li>
+
+                    <li class="dropdown mr-5">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Channels <span class="caret"></span></a>
 
@@ -47,6 +51,7 @@
                             @endforeach
                         </ul>
                     </li>
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
