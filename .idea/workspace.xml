@@ -193,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="49721000" />
+      <workItem from="1597575512449" duration="50548000" />
     </task>
     <servers />
   </component>
@@ -245,14 +245,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597905694643" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597905691586">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597930138238">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597905691586" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597894272104">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597930138238" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597929683906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597894272104" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597929683906" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
