@@ -147,27 +147,28 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager" selected="PHPUnit.ParticipateInThreadsTest.a_reply_requires_a_body">
-    <configuration name="CreateThreadsTest.a_thread_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="a_thread_requires_a_body" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CreateThreadsTest.a_thread_requires_a_title" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="a_thread_requires_a_title" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.CreateThreadsTest.guest_may_not_create_threads">
+    <configuration name="ChannelTest.a_channel_consists_of_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ChannelTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ChannelTest.php" method="a_channel_consists_of_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CreateThreadsTest.a_thread_requires_a_valid_channel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="a_thread_requires_a_valid_channel" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="an_authenticated_user_can_create_new_forum_threads" scope="Method" />
+    <configuration name="CreateThreadsTest.guest_may_not_create_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="guest_may_not_create_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ParticipateInThreadsTest.a_reply_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="a_reply_requires_a_body" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadThreadsTest.a_user_can_filter_threads_according_to_a_tag" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_according_to_a_tag" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -176,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateThreadsTest.guest_may_not_create_threads" />
+        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_according_to_a_tag" />
+        <item itemvalue="PHPUnit.ChannelTest.a_channel_consists_of_threads" />
         <item itemvalue="PHPUnit.ParticipateInThreadsTest.a_reply_requires_a_body" />
         <item itemvalue="PHPUnit.CreateThreadsTest.a_thread_requires_a_valid_channel" />
-        <item itemvalue="PHPUnit.CreateThreadsTest.a_thread_requires_a_body" />
-        <item itemvalue="PHPUnit.CreateThreadsTest.a_thread_requires_a_title" />
-        <item itemvalue="PHPUnit.CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="44940000" />
+      <workItem from="1597575512449" duration="48113000" />
     </task>
     <servers />
   </component>
@@ -204,10 +205,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="456" y="285" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.23.1440.877@0.23.1440.877" timestamp="1597805276558" />
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1597848811144">
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1597896142522">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1597848811144" />
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1597896142522" />
     <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597889364367">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -220,38 +221,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597889624347">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597897518149">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597889624347" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597889624346">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597897518149" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597897518148">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597889624346" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597889624346">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597897518148" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597897518148">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597889624346" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597889624346">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597897518148" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597897518149">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597889624346" />
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1597805279869">
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597897518149" />
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1597896279743">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597805279869" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597852047372">
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597896279743" />
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597893515419">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597852047372" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597889322086">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597893515419" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597897590685">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597889322086" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597828199381">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597897590685" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597894272104">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597828199381" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597894272104" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
