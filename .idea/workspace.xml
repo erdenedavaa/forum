@@ -150,25 +150,25 @@
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateThreadsTest.guest_may_not_create_threads">
+  <component name="RunManager" selected="PHPUnit.ReadThreadsTest.a_user_can_view_all_threads">
     <configuration name="ChannelTest.a_channel_consists_of_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ChannelTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ChannelTest.php" method="a_channel_consists_of_threads" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CreateThreadsTest.a_thread_requires_a_valid_channel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="a_thread_requires_a_valid_channel" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CreateThreadsTest.guest_may_not_create_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="guest_may_not_create_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ParticipateInThreadsTest.a_reply_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="a_reply_requires_a_body" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="ReadThreadsTest.a_user_can_filter_threads_according_to_a_tag" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_according_to_a_tag" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_any_username" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_any_username" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadThreadsTest.a_user_can_view_all_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_view_all_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -177,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_view_all_threads" />
+        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_any_username" />
         <item itemvalue="PHPUnit.CreateThreadsTest.guest_may_not_create_threads" />
         <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_according_to_a_tag" />
         <item itemvalue="PHPUnit.ChannelTest.a_channel_consists_of_threads" />
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest.a_reply_requires_a_body" />
-        <item itemvalue="PHPUnit.CreateThreadsTest.a_thread_requires_a_valid_channel" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="50548000" />
+      <workItem from="1597575512449" duration="52459000" />
     </task>
     <servers />
   </component>
@@ -221,34 +221,34 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597897518149">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597975062544">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597897518149" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597897518148">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597975062544" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597975062543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597897518148" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597897518148">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597975062543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597897518148" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597897518149">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597975062543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597897518149" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1597896279743">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597896279743" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597905694643">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597932434861">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597905694643" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597930138238">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597932434861" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597974765913">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597930138238" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597974765913" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597929683906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -24,11 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        \View::composer('*', function($view)
-//        {
-//            $view->with('channels', \App\Channel::all());
-//        });
-        
-        \View::share('channels', Channel::all());
+        \View::composer('*', function($view)
+        {
+            $view->with('channels', \App\Channel::all());
+        });
+
+//        \View::share('channels', Channel::all());
+        // Ene ni testing deer algaa uusgesen
     }
 }
