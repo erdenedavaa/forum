@@ -193,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="52459000" />
+      <workItem from="1597575512449" duration="61917000" />
     </task>
     <servers />
   </component>
@@ -213,6 +213,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1597889364367" />
+    <state x="708" y="230" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598012636060">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="708" y="230" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.23.1440.877@0.23.1440.877" timestamp="1598012636060" />
+    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1597976893177">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.23.1440.877@0.23.1440.877" timestamp="1597976893177" />
+    <state x="685" y="304" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1" timestamp="1598004986543">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="685" y="304" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1/0.23.1440.877@0.23.1440.877" timestamp="1598004986543" />
     <state x="564" y="381" key="ComposerInitDialogKey" timestamp="1597797072636">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -221,22 +233,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1597975062544">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1598004933029">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1597975062544" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1597975062543">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1598004933029" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1598004933029">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1597975062543">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1598004933029" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1598004933029">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1597975062543">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1598004933029" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1598004933029">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1597975062543" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1598004933029" />
+    <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598004848147">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1598004848147" />
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1597896279743">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -245,10 +261,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597932434861" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597974765913">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1597982272539">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597974765913" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597982272539" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597929683906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
