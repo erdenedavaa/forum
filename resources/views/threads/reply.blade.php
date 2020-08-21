@@ -1,4 +1,4 @@
-<div class="col-md-8 mb-2">
+<div class="my-2">
     <div class="card">
         <div class="card-header">
             <a href="#">

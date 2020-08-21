@@ -73,11 +73,22 @@ class ThreadsController extends Controller
      *
      * @param $channelId
      * @param \App\Thread $thread
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show($channelId, Thread $thread)
     {
-        return  view('threads.show', compact('thread'));
+//        return $thread->load('replies');
+
+//        return Thread::withCount('replies')->find(52);
+
+//        return $thread->replyCount;
+
+//        return $thread;
+
+        return  view('threads.show', [
+            'thread' => $thread,
+            'replies' => $thread->replies()->paginate(20)
+        ]);
     }
 
     /**

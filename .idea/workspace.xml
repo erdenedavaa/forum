@@ -193,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597575510428</updated>
-      <workItem from="1597575512449" duration="61917000" />
+      <workItem from="1597575512449" duration="67490000" />
     </task>
     <servers />
   </component>
@@ -217,10 +217,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="708" y="230" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.23.1440.877@0.23.1440.877" timestamp="1598012636060" />
-    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1597976893177">
+    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1598019685743">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.23.1440.877@0.23.1440.877" timestamp="1597976893177" />
+    <state x="708" y="163" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.23.1440.877@0.23.1440.877" timestamp="1598019685743" />
     <state x="685" y="304" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1" timestamp="1598004986543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -257,18 +257,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1597896279743" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1597932434861">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1598023022015">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1597932434861" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1597982272539">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1598023022015" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1598028367035">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1597982272539" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597929683906">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1598028367035" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1598027918468">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1597929683906" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1598027918468" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
