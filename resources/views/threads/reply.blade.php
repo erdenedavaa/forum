@@ -14,7 +14,8 @@
 
                         <button type="submit"
                                 class="btn btn-light btn-outline-secondary"
-                                {{ $reply->isFavorited() ? 'disabled' : '' }}>
+                                {{ $reply->isFavorited() ? 'disabled' : '' }}
+                        >
                             {{ $reply->favorites()->count() }} {{ Str::plural('Favorite', $reply->favorites()->count()) }}
 
                         </button>
