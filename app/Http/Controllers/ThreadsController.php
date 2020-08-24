@@ -27,7 +27,7 @@ class ThreadsController extends Controller
      */
     public function index(Channel $channel, ThreadFilters $filters)
     {
-        $threads = $this->getThreads($filters, $channel);
+        $threads = $this->getThreads($channel, $filters);
 
         return view('threads.index', compact('threads'));
     }
@@ -132,9 +132,9 @@ class ThreadsController extends Controller
      * @param \App\Channel $channel
      * @return mixed
      */
-    protected function getThreads(ThreadFilters $filters, Channel $channel)
+    protected function getThreads(Channel $channel, ThreadFilters $filters)
     {
-        $threads = Thread::with('channel')->latest()->filter($filters);
+        $threads = Thread::latest()->filter($filters);
 
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
