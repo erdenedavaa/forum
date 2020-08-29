@@ -120,11 +120,12 @@ class ThreadsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Thread  $thread
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
     public function destroy($channel, Thread $thread)
     {
-//        $thread->replies()->delete();
+        $this->authorize('update', $thread);
+
         $thread->delete();
 
         if (request()->wantsJson()) {
