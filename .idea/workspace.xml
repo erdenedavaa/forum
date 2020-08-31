@@ -24,9 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ActivityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ActivityTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RecordsActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RecordsActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/activities/activity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/activities/activity.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +190,7 @@
       <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProfilesTest.profiles_display_all_threads_created_by_the_associated_user">
+  <component name="RunManager" selected="PHPUnit.CreateThreadsTest.authorized_users_can_delete_threads">
     <configuration name="ActivityTest.it_fetches_a_feed_for_any_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ActivityTest.php" method="it_fetches_a_feed_for_any_user" scope="Method" />
       <method v="2" />
@@ -198,8 +199,8 @@
       <TestRunner class="Tests\Feature\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ActivityTest.php" method="it_records_activity_when_a_reply_is_created" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ActivityTest.it_records_activity_when_a_thread_is_created" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ActivityTest.php" method="it_records_activity_when_a_thread_is_created" scope="Method" />
+    <configuration name="CreateThreadsTest.authorized_users_can_delete_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="authorized_users_can_delete_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ProfilesTest.a_user_has_a_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -216,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateThreadsTest.authorized_users_can_delete_threads" />
         <item itemvalue="PHPUnit.ProfilesTest.profiles_display_all_threads_created_by_the_associated_user" />
         <item itemvalue="PHPUnit.ProfilesTest.a_user_has_a_profile" />
         <item itemvalue="PHPUnit.ActivityTest.it_fetches_a_feed_for_any_user" />
         <item itemvalue="PHPUnit.ActivityTest.it_records_activity_when_a_reply_is_created" />
-        <item itemvalue="PHPUnit.ActivityTest.it_records_activity_when_a_thread_is_created" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +235,7 @@
       <updated>1597575510428</updated>
       <workItem from="1597575512449" duration="92761000" />
       <workItem from="1598621849555" duration="11333000" />
-      <workItem from="1598693735929" duration="13448000" />
+      <workItem from="1598693735929" duration="15004000" />
     </task>
     <servers />
   </component>
@@ -293,22 +294,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1598889934785">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1598892057174">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1598889934785" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1598889934785">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1598892057174" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1598892057174">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1598889934785" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1598889934784">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1598892057174" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1598892057173">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1598889934784" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1598889934785">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1598892057173" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1598892057174">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1598889934785" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1598892057174" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598694776906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -325,10 +326,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1598670059775" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1598889574321">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1598890719693">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1598889574321" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1598890719693" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

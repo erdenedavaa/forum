@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Activity;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
@@ -92,6 +93,20 @@ class CreateThreadsTest extends TestCase
 
        $this->assertDatabaseMissing('threads', ['id' => $thread->id]);
        $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+
+//       $this->assertDatabaseMissing('activities', [
+//           'subject_id' => $thread->id,
+//           'subject_type' => get_class($thread)
+//       ]);
+//
+//       $this->assertDatabaseMissing('activities', [
+//           'subject_id' => $reply->id,
+//           'subject_type' => get_class($reply)
+//       ]);
+
+       $this->assertEquals(0, Activity::count());
+       // deerh 2 iin shaardlagagui shuud count() ashiglana. Ene ni laraveld tsaanaasaa
+       // database -d iu ch bhgui iltgene
    }
 
     public function publishThread($overrides = [])

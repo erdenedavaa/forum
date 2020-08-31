@@ -18,6 +18,10 @@
 
             }
 
+            static::deleting(function ($model) {
+                $model->activity()->delete();
+            });
+
 //            static::created(function ($thread) {
 //                $thread->recordActivity('created');
 //            });
