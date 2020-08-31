@@ -7,7 +7,7 @@
                 <div class="card mb-md-5">
                     <div class="card-header d-flex justify-content-between">
                         <div class="d-flex align-items-center">
-                            <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a> posted:
+                            <a href="{{ route('profile', $thread->creator) }}" class="pr-1">{{ $thread->creator->name }}</a> posted:
                             {{ $thread->title }}
                         </div>
 
@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <p>
                             This thread was published {{ $thread->created_at->diffForHumans() }} by
-                            <a href="#">{{ $thread->creator->name }}</a>
+                            <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a>
                             @if ($thread->replies_count)
                                 , and currently has {{ $thread->replies_count }} {{ Str::plural('comment', $thread->replies_count) }}.
                                 <!-- SQL query just catch count, instead of return all collection, then count. -->
