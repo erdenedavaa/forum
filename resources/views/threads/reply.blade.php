@@ -1,4 +1,4 @@
-<div class="my-2">
+<div id="reply-{{ $reply->id }}" class="my-2">
     <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
