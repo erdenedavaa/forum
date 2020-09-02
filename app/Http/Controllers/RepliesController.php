@@ -29,6 +29,15 @@ class RepliesController extends Controller
         return back()->with('flash', 'Your reply has been left.');
     }
 
+    public function update(Reply $reply)
+    {
+        $this->authorize('update', $reply);
+//        $reply->update(['body' => request('body')]);
+        // doorhtoi adilhan
+
+        $reply->update(request(['body']));
+    }
+
     public function destroy(Reply $reply)
     {
 //        if ($reply->user_id != auth()->id()) {
@@ -41,6 +50,7 @@ class RepliesController extends Controller
         return back();
         // butsaah utga ni 302 bdag.
     }
+
 
 
 }
