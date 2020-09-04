@@ -1965,7 +1965,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       editing: false,
-      body: this.attributes.body
+      body: this.attributes.body,
+      isDeleted: false
     };
   },
   methods: {
@@ -1975,6 +1976,14 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.editing = false;
       flash('Updated');
+    },
+    destroy: function destroy() {
+      axios["delete"]('/replies/' + this.attributes.id); // $(this.$el).fadeOut(300, () => {
+      //     flash('Your reply has been deleted.');
+      // });
+
+      this.isDeleted = true;
+      flash('Your reply has been deleted.');
     }
   }
 });

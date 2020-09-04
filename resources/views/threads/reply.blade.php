@@ -1,5 +1,5 @@
 <reply :attributes="{{ $reply }}" inline-template v-cloak>
-    <div id="reply-{{ $reply->id }}" class="my-2">
+    <div id="reply-{{ $reply->id }}" class="my-2"  v-bind:class="{ 'd-none': isDeleted }">
         <div class="card">
             <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
@@ -44,13 +44,14 @@
             @can('update', $reply)
                 <div class="card-footer d-flex">
                     <button class="btn btn-secondary btn-sm mr-2" @click="editing = true">Edit</button>
+                    <button class="btn btn-danger btn-sm" @click="destroy">Delete</button>
 
-                    <form method="POST" action="/replies/{{ $reply->id }}">
-                        @csrf
-                        @method('DELETE')
+{{--                    <form method="POST" action="/replies/{{ $reply->id }}">--}}
+{{--                        @csrf--}}
+{{--                        @method('DELETE')--}}
 
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
+{{--                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>--}}
+{{--                    </form>--}}
                 </div>
             @endcan
         </div>
