@@ -35,6 +35,29 @@ class FavoritesTest extends TestCase
     }
 
     /** @test */
+    function an_authenticated_user_can_unfavorite_a_reply()
+    {
+        $this->signIn();
+
+        $reply = create('App\Reply');
+
+        // Bidend unfovirite hiih ni chuhal bga tul doorhig comment hiigeed
+        // togch bdlaar shiidlee.
+//        $this->post('replies/' . $reply->id . '/favorites');
+//
+//        $this->assertCount(1, $reply->favorites);
+
+        $reply->favorite();
+
+        $this->delete('replies/' . $reply->id . '/favorites');
+
+        // Deerh neg hesgiin comment hiisen tul door bga fresh() instance
+        // hereggui
+        // $this->assertCount(0, $reply->fresh()->favorites);
+         $this->assertCount(0, $reply->favorites);
+    }
+
+    /** @test */
     function an_authenticated_user_may_only_favorite_a_reply_once()
     {
         $this->signIn();
