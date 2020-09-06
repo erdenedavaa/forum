@@ -13,7 +13,8 @@ export default {
     data() {
         return {
             count: this.reply.favoritesCount,
-            active: this.reply.isFavorited
+            active: this.reply.isFavorited,
+            userLoggedIn: this.reply.isUserLoggedIn
         }
     },
 
@@ -32,7 +33,12 @@ export default {
 
     methods: {
         toggle() {
-            this.active ? this.destroy() : this.create();
+            if (this.userLoggedIn) {
+                this.active ? this.destroy() : this.create();
+            } else {
+                flash('Энэ үйлдлийг хийхийн тулд заавал нэвтэрч орсон байх ёстой!');
+            }
+
         },
 
         create() {

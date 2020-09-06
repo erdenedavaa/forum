@@ -21,6 +21,9 @@
             static::deleting(function ($model) {
                 $model->activity()->delete();
             });
+            // When delete a Reply, then activity for Reply
+            // deleted as well.
+            // All model same...
 
 //            static::created(function ($thread) {
 //                $thread->recordActivity('created');

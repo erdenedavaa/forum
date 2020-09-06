@@ -1920,13 +1920,14 @@ __webpack_require__.r(__webpack_exports__);
   props: ['reply'],
   data: function data() {
     return {
-      favoritesCount: this.reply.favoritesCount,
-      isFavorited: this.reply.isFavorited
+      count: this.reply.favoritesCount,
+      active: this.reply.isFavorited,
+      userLoggedIn: this.reply.isUserLoggedIn
     };
   },
   computed: {
     classes: function classes() {
-      return ['btn', this.isFavorited ? 'btn-primary' : 'btn-default'];
+      return ['btn', this.active ? 'btn-primary' : 'btn-default'];
     },
     endpoint: function endpoint() {
       return '/replies/' + this.reply.id + '/favorites';
@@ -1934,20 +1935,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     toggle: function toggle() {
-      return this.isFavorited ? this.destroy() : this.create();
+      if (this.userLoggedIn) {
+        this.active ? this.destroy() : this.create();
+      } else {
+        flash('Энэ үйлдлийг хийхийн тулд заавал нэвтэрч орсон байх ёстой!');
+      }
     },
     create: function create() {
       axios.post(this.endpoint);
-      this.isFavorited = true;
-      this.favoritesCount++;
+      this.active = true;
+      this.count++;
     },
     destroy: function destroy() {
       axios["delete"](this.endpoint); // create the endpoint in php end.
       // blade iin daraah endpoint ruu zaah heregtei
       // "/replies/{{ $reply->id }}/favorites"
 
-      this.isFavorited = false;
-      this.favoritesCount--;
+      this.active = false;
+      this.count--;
     }
   }
 });
@@ -38288,7 +38293,7 @@ var render = function() {
     [
       _c("i", { staticClass: "fas fa-heart" }),
       _vm._v(" "),
-      _c("span", { domProps: { textContent: _vm._s(_vm.favoritesCount) } })
+      _c("span", { domProps: { textContent: _vm._s(_vm.count) } })
     ]
   )
 }
@@ -50577,14 +50582,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!**********************************************!*\
   !*** ./resources/js/components/Favorite.vue ***!
   \**********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Favorite_vue_vue_type_template_id_3982b107_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Favorite.vue?vue&type=template&id=3982b107&scoped=true& */ "./resources/js/components/Favorite.vue?vue&type=template&id=3982b107&scoped=true&");
 /* harmony import */ var _Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Favorite.vue?vue&type=script&lang=js& */ "./resources/js/components/Favorite.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Favorite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -50614,7 +50620,7 @@ component.options.__file = "resources/js/components/Favorite.vue"
 /*!***********************************************************************!*\
   !*** ./resources/js/components/Favorite.vue?vue&type=script&lang=js& ***!
   \***********************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

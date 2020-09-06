@@ -9,22 +9,25 @@
                         </a> said {{ $reply->created_at->diffForHumans() }}...
                     </h6>
 
-                    <div>
-                        <favorite :reply="{{ $reply }}"></favorite>
+{{--                    @if (Auth::check())--}}
+                        <div>
+                            <favorite :reply="{{ $reply }}"></favorite>
 
-{{--                        <form method="POST" action="/replies/{{ $reply->id }}/favorites">--}}
-{{--                            @csrf--}}
+                            {{--                        <form method="POST" action="/replies/{{ $reply->id }}/favorites">--}}
+                            {{--                            @csrf--}}
 
-{{--                            <button type="submit"--}}
-{{--                                    class="btn btn-light btn-outline-secondary"--}}
-{{--                                {{ $reply->isFavorited() ? 'disabled' : '' }}--}}
-{{--                            >--}}
-{{--                                                            {{ $reply->favorites()->count() }} {{ Str::plural('Favorite', $reply->favorites()->count()) }}--}}
-{{--                                {{ $reply->favorites_count}} {{ Str::plural('Favorite', $reply->favorites_count) }}--}}
+                            {{--                            <button type="submit"--}}
+                            {{--                                    class="btn btn-light btn-outline-secondary"--}}
+                            {{--                                {{ $reply->isFavorited() ? 'disabled' : '' }}--}}
+                            {{--                            >--}}
+                            {{--                                                            {{ $reply->favorites()->count() }} {{ Str::plural('Favorite', $reply->favorites()->count()) }}--}}
+                            {{--                                {{ $reply->favorites_count}} {{ Str::plural('Favorite', $reply->favorites_count) }}--}}
 
-{{--                            </button>--}}
-{{--                        </form>--}}
-                    </div>
+                            {{--                            </button>--}}
+                            {{--                        </form>--}}
+                        </div>
+{{--                    @endif--}}
+                    
                 </div>
             </div>
 
