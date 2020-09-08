@@ -10,7 +10,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
+    <script>
+        window.App = {!! json_encode([
+                'csrfToken' => csrf_token(),
+                'user' => Auth::user(),
+                'signedIn' => Auth::check()
+        ]) !!};
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +25,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<!-- deerhiig daraah baidlaar mix tei bichij bolno -->
+{{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
+    <script defer src="{{ mix('js/app.js') }}"></script>
 </head>
 <body style="padding-bottom: 100px;">
 <div id="app">

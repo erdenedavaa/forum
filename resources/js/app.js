@@ -8,19 +8,20 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/Flash.vue -> <example-component></example-component>
- */
+// Global aar zarim function zarlah yed ene zamaar
+Vue.prototype.authorize = function(handler) {
+    // Additional admin privileges.
+    // return true; System iin huvid bygdiis zasah erhtei bolno
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+    let user = window.App.user;
+
+    return user ? handler(user) : false;
+};
 
 Vue.component('flash', require('./components/Flash.vue').default);
-Vue.component('reply', require('./components/Reply.vue').default);
+
+Vue.component('thread-view', require('./pages/Thread.vue').default);
+// Bolohgui zunduu udsanii daraa .default nemsen chin bolchloo
 
 window.events = new Vue();
 
@@ -35,5 +36,5 @@ window.flash = function (message) {
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app'
 });
