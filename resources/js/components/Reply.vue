@@ -6,7 +6,7 @@
                     <h6 class="mb-0">
                         <a :href="'/profiles/'+data.owner.name"
                             v-text="data.owner.name">
-                        </a> said {{ data.created_at }}...
+                        </a> said <span v-text="ago"></span>
                         <!-- moment.js time deer dajgui gej bn. Front
                          endees bid Carbon helder ruu can't access -->
                     </h6>
@@ -42,6 +42,7 @@
 
 <script>
     import Favorite from './Favorite.vue';
+    import moment from 'moment';
 
     export default {
         name: "Reply",
@@ -60,6 +61,10 @@
         },
 
         computed: {
+            ago() {
+                return moment(this.data.created_at).fromNow() + '...';
+            },
+
             signedIn() {
                 return window.App.signedIn;
             },
