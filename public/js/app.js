@@ -2208,6 +2208,7 @@ __webpack_require__.r(__webpack_exports__);
       // Enii ner ni distracturing gedgiin bn
       this.dataSet = data;
       this.items = data.data;
+      window.scrollTo(0, 0);
     }
   }
 });

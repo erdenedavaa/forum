@@ -22,7 +22,8 @@ class ParticipateInThreadsTest extends TestCase
     {
         // Given we have a authenticated user
 //        $user = factory('App\User')->create();
-        $this->be($user = create('App\User'));
+        // $this->be($user = create('App\User')); // same as below
+        $this->signIn();
 
         // Controller deer middleware auth hiisen tul daraah baidlaar
         // shuud auth user yysgej bolno.
@@ -36,8 +37,12 @@ class ParticipateInThreadsTest extends TestCase
         $this->post($thread->path() . '/replies', $reply->toArray());
 
         // Then their reply should be visible on the page
-        $this->get($thread->path())
-            ->assertSee($reply->body);
+        //$this->get($thread->path())
+         //   ->assertSee($reply->body);
+        // phpunit ni php eer test hiij bga tul JS uildel hiij chadahgui
+        // iimees DB deer deerh medeelel bnu gej shalgana
+        $this->assertDatabaseHas('replies', ['body' => $reply->body]);
+        $this->assertEquals(1, $thread->fresh()->replies_count);
     }
 
     /** @test */
@@ -79,6 +84,8 @@ class ParticipateInThreadsTest extends TestCase
         $this->delete("/replies/{$reply->id}")->assertStatus(302);
 
         $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+
+        $this->assertEquals(0, $reply->thread->fresh()->replies_count);
     }
 
     /** @test */

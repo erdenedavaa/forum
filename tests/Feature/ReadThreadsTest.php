@@ -33,17 +33,19 @@ class ReadThreadsTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_read_replies_that_are_associated_with_a_thread()
-    {
-//        $this->withoutExceptionHandling();
-
-        $reply = factory('App\Reply')
-            ->create(['thread_id' => $this->thread->id]);
-
-        $this->get($this->thread->path())
-//            ->assertStatus(200)
-            ->assertSee($reply->body);
-    }
+    // ene ni ParticipateInThreadsTest iin
+    // an_authenticated_user_may_participate_in_forum_threads() -tei same tul delete hiiv
+//    public function a_user_can_read_replies_that_are_associated_with_a_thread()
+//    {
+////        $this->withoutExceptionHandling();
+//
+//        $reply = factory('App\Reply')
+//            ->create(['thread_id' => $this->thread->id]);
+//
+//        $this->get($this->thread->path())
+////            ->assertStatus(200)
+//            ->assertSee($reply->body);
+//    }
 
     /** @test */
     function a_user_can_filter_threads_according_to_a_channel()
@@ -55,6 +57,42 @@ class ReadThreadsTest extends TestCase
         $this->get('/threads/' . $channel->slug)
             ->assertSee($threadInChannel->title)
             ->assertDontSee($threadNotInChannel->title);
+    }
+
+    /** @test */
+    function a_user_can_filter_threads_by_popularity()
+    {
+        // Given we have three threads
+        // With 2 replies, 3 replies, and 0 replies, respectively.
+        $threadWithTwoReplies = create('App\Thread');
+        create('App\Reply', ['thread_id' => $threadWithTwoReplies->id], 2);
+
+        $threadWithThreeReplies = create('App\Thread');
+        create('App\Reply', ['thread_id' => $threadWithThreeReplies->id], 3);
+
+        $threadWithNoReplies = $this->thread;
+
+        // When I filter all threads by popularity
+        $response = $this->getJson('threads?popular=1')->json();
+        // getJson gedeg ni URL iin query heldgiin bishuu
+
+        // Then they should be returned from most replies to least.
+        $this->assertEquals([3, 2, 0], array_column($response, 'replies_count'));
+    }
+
+    /** @test */
+    function a_user_can_filter_threads_by_those_that_are_unanswered()
+    {
+        // test hiigdehed automataar neg thread uusej bga,
+        // yyniig hamgiin ehend setUp aar tohiruulsan bga
+
+        // Ene bol dahin shine thread with reply
+        $thread = create('App\Thread');
+        create('App\Reply', ['thread_id' => $thread->id]);
+
+        $response = $this->getJson('threads?unanswered=1')->json();
+
+        $this->assertCount(1, $response);
     }
 
     /** @test */
@@ -81,7 +119,7 @@ class ReadThreadsTest extends TestCase
 
 //        dd($response);
 
-        $this->assertCount(1, $response['data']);
+        $this->assertCount(2, $response['data']);
         $this->assertEquals(2, $response['total']);
     }
 }

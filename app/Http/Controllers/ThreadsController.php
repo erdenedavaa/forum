@@ -23,11 +23,15 @@ class ThreadsController extends Controller
      *
      * @param \App\Channel $channel
      * @param \App\Filters\ThreadFilters $filters
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index(Channel $channel, ThreadFilters $filters)
     {
         $threads = $this->getThreads($channel, $filters);
+
+        if (request()->wantsJson()) {
+            return $threads;
+        }
 
         return view('threads.index', compact('threads'));
     }
@@ -150,6 +154,9 @@ class ThreadsController extends Controller
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
         }
+
+//        dd($threads->toSql());
+        // testlehed, dan sql query haruulahad ashiglasan
 
 //        $threads = $threads->get();
 

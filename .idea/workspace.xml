@@ -23,21 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Paginator.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/Collection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filters/ThreadFilters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filters/ThreadFilters.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_16_105735_create_threads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_16_105735_create_threads_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/NewReply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NewReply.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/utilities/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/utilities/functions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,21 +201,21 @@
       <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ReadThreadsTest.a_user_can_request_all_replies_for_a_given_thread">
-    <configuration name="FavoritesTest.an_authenticated_user_can_unfavorite_a_reply" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FavoritesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FavoritesTest.php" method="an_authenticated_user_can_unfavorite_a_reply" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered">
+    <configuration name="ParticipateInThreadsTest.an_authenticated_user_may_participate_in_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="an_authenticated_user_may_participate_in_forum_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ParticipateInThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" scope="Class" />
+    <configuration name="ParticipateInThreadsTest.authorized_users_can_delete_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="authorized_users_can_delete_replies" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ParticipateInThreadsTest.authorized_users_can_update_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="authorized_users_can_update_replies" scope="Method" />
+    <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_popularity" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_popularity" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ParticipateInThreadsTest.unauthorized_users_cannot_update_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="unauthorized_users_cannot_update_replies" scope="Method" />
+    <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_those_that_are_unanswered" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ReadThreadsTest.a_user_can_request_all_replies_for_a_given_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -231,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" />
+        <item itemvalue="PHPUnit.ParticipateInThreadsTest.authorized_users_can_delete_replies" />
+        <item itemvalue="PHPUnit.ParticipateInThreadsTest.an_authenticated_user_may_participate_in_forum_threads" />
+        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_popularity" />
         <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_request_all_replies_for_a_given_thread" />
-        <item itemvalue="PHPUnit.FavoritesTest.an_authenticated_user_can_unfavorite_a_reply" />
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest.authorized_users_can_update_replies" />
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest.unauthorized_users_cannot_update_replies" />
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +248,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="58294000" />
+      <workItem from="1599121957091" duration="68710000" />
     </task>
     <servers />
   </component>
@@ -278,10 +275,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="456" y="285" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.23.1440.877@0.23.1440.877" timestamp="1598279702114" />
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1597896142522">
+    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599751039432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1597896142522" />
+    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1599751039432" />
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1599753801673">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1599753801673" />
     <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598620927543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -310,50 +311,50 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1599667258130">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1599754465367">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1599667258130" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1599667258130">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1599754465367" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1599754465366">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1599667258130" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1599667258129">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1599754465366" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1599754465365">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1599667258129" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1599667258130">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1599754465365" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1599754465366">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1599667258130" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1599754465366" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598694776906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1598694776906" />
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1599729038902">
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1599731339629">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1599729038902" />
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1599731339629" />
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1598693541512">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1599666920828">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1599754134348">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1599666920828" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1599729272695">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1599754134348" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1599753715968">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1599729272695" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1599753715968" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1599729283053">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1599750560900">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1599729283053" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1599750560900" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

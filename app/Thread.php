@@ -17,9 +17,11 @@ class Thread extends Model
     {
         parent::boot();
 
-        static::addGlobalScope('replyCount', function($builder) {
-            $builder->withCount('replies');
-        });
+        // doorh ni bainga duudagddag, harin uuniig
+        // DBiin columnd oruulbal nemelt query hiigdehgui
+//        static::addGlobalScope('replyCount', function($builder) {
+//            $builder->withCount('replies');
+//        });
 
         static::deleting(function ($thread) {
             $thread->replies->each->delete();
@@ -56,6 +58,15 @@ class Thread extends Model
     public function addReply($reply)
     {
         return $this->replies()->create($reply);
+        // replies_count columniig ihesgeh ehnii arga, nuguuh ni
+        // model event
+        // Model Event ashiglahiin davuu tal ni
+        // replies_count ni addReply bolon busdaas hamaaralgui ajildag bolno
+//        $reply = $this->replies()->create($reply);
+//
+//        $this->increment('replies_count');
+//
+//        return $reply;
     }
 
     public function channel()
