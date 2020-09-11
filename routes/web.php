@@ -35,6 +35,10 @@ Route::post('/threads/{channel}/{thread}/replies', 'RepliesController@store');
 Route::patch('/replies/{reply}', 'RepliesController@update');
 Route::delete('/replies/{reply}', 'RepliesController@destroy');
 
+Route::post('/threads/{channel}/{thread}/subscriptions', 'ThreadsSubscriptionsController@store')->middleware('auth');
+// Ingesneer route model binding iig ($channelId, Thread $thread) gesen mayagaar hiine gesen ug
+    // middleware('auth') hiisen shaltgaan ni bid testendee auth user ogt oruulaagui
+
 Route::post('/replies/{reply}/favorites', 'FavoritesController@store');
 Route::delete('/replies/{reply}/favorites', 'FavoritesController@destroy');
 

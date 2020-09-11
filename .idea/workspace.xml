@@ -23,11 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ThreadSubscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_10_175728_create_thread_subscriptions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsSubscriptionsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/SubscribeToThreadsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -194,17 +193,17 @@
       <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ThreadTest.a_thread_can_be_unsubscribed_from">
-    <configuration name="ParticipateInThreadsTest.an_authenticated_user_may_participate_in_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="an_authenticated_user_may_participate_in_forum_threads" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.SubscribeToThreadsTest.a_user_can_subscribe_to_threads">
     <configuration name="ParticipateInThreadsTest.authorized_users_can_delete_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="authorized_users_can_delete_replies" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_those_that_are_unanswered" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SubscribeToThreadsTest.a_user_can_subscribe_to_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\SubscribeToThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SubscribeToThreadsTest.php" method="a_user_can_subscribe_to_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ThreadTest.a_thread_can_be_subscribed_to" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -221,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.SubscribeToThreadsTest.a_user_can_subscribe_to_threads" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_can_be_unsubscribed_from" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_can_be_subscribed_to" />
         <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" />
         <item itemvalue="PHPUnit.ParticipateInThreadsTest.authorized_users_can_delete_replies" />
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest.an_authenticated_user_may_participate_in_forum_threads" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +240,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="71622000" />
+      <workItem from="1599121957091" duration="73755000" />
     </task>
     <servers />
   </component>
@@ -264,10 +263,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="456" y="285" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1598279702114">
+    <state x="456" y="285" width="676" height="352" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1599832358096">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="456" y="285" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.23.1440.877@0.23.1440.877" timestamp="1598279702114" />
+    <state x="456" y="285" width="676" height="352" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.23.1440.877@0.23.1440.877" timestamp="1599832358096" />
     <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599751039432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -304,30 +303,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1599831910868">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1599834003468">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1599831910868" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1599831910867">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1599834003468" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1599834003467">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1599831910867" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1599831910867">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1599834003467" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1599834003467">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1599831910867" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1599831910868">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1599834003467" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1599834003467">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1599831910868" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1599834003467" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598694776906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1598694776906" />
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1599731339629">
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1599832359789">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1599731339629" />
+    <state x="19" y="100" width="1421" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1599832359789" />
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1598693541512">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -336,18 +335,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1599754134348" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1599831103308">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1599832510533">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1599831103308" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1599832510533" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1599760704269">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1599832915025">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1599760704269" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1599832915025" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
