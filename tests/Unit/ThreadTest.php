@@ -60,4 +60,42 @@
 
             $this->assertInstanceOf('App\Channel', $thread->channel);
         }
+
+        /** @test */
+        function a_thread_can_be_subscribed_to()
+        {
+            // Given we have a thread
+            $thread = create('App\Thread');
+
+            // And an authenticated user
+//            $this->signIn();
+            // When the user subscribes to the thread
+//            $thread->subscribe();
+            // ene uildliig tovchloh uudnees daraab baidlaar shinechillee
+
+            $thread->subscribe($userId = 1);
+
+            // Then we should be able to fetch all threads that the user has subscribed to.
+            $this->assertEquals(
+                1,
+//                $thread->subscription()->where('user_id', auth()->id())->count()
+                // deerh uurchlulttei holbootoigoor daraah baidlaar hiisen
+                $thread->subscription()->where('user_id',$userId)->count()
+                // ene uurchlultiig hiisneer bid never bother signIn user
+            );
+        }
+
+        /** @test */
+        function a_thread_can_be_unsubscribed_from()
+        {
+            // Given we have a thread
+            $thread = create('App\Thread');
+
+            // And a user who is subscribed to the thread.
+            $thread->subscribe($userId = 1);
+
+            $thread->unsubscribe($userId);
+
+            $this->assertCount(0, $thread->subscription);
+        }
     }
