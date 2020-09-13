@@ -82,6 +82,17 @@ class ThreadsController extends Controller
      */
     public function show($channel, Thread $thread)
     {
+//        return $thread->append('isSubscribedTo');
+        // deerh ni thread json deer 'isSubscribedTo' iin utgiig
+        //oruulj irne gesen ug
+        // Hervee ene ni always be included iig husej bval
+        // Thread model deer $appends deer zaaj ugnu.
+
+//        dd($thread->getIsSubscribedToAttribute());
+
+//        return $thread;
+        // Ene ni json utga butsaana
+
 //        return $thread->replies;
 
 //        return $thread->load('replies');

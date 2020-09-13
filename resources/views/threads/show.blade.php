@@ -42,10 +42,13 @@
                                 <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a>
                                 @if ($thread->replies_count)
                                     , and currently
-                                    has <span v-text="repliesCount"></span> {{ Str::plural('comment', $thread->replies_count) }}
-                                    .
+                                    has <span v-text="repliesCount"></span> {{ Str::plural('comment', $thread->replies_count) }}.
                                     <!-- SQL query just catch count, instead of return all collection, then count. -->
                                 @endif
+                            </p>
+
+                            <p>
+                                <subscribe-button :active="{{ json_encode($thread->isSubscribedTo) }}"></subscribe-button>
                             </p>
                         </div>
                     </div>
