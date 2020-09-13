@@ -23,18 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/SubscribeButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsSubscriptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsSubscriptionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_10_175728_create_thread_subscriptions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_10_175728_create_thread_subscriptions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/Thread.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Thread.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SubscribeButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SubscribeButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/SubscribeToThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/SubscribeToThreadsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +193,7 @@
       <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.SubscribeToThreadsTest.a_user_can_unsubscribe_from_threads">
+  <component name="RunManager" selected="PHPUnit.SubscribeToThreadsTest.a_user_can_subscribe_to_threads">
     <configuration name="SubscribeToThreadsTest.a_user_can_subscribe_to_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\SubscribeToThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SubscribeToThreadsTest.php" method="a_user_can_subscribe_to_threads" scope="Method" />
       <method v="2" />
@@ -228,9 +220,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.SubscribeToThreadsTest.a_user_can_subscribe_to_threads" />
         <item itemvalue="PHPUnit.SubscribeToThreadsTest.a_user_can_unsubscribe_from_threads" />
         <item itemvalue="PHPUnit.ThreadTest.it_knows_if_authenticated_user_is_subscribe_to_it" />
-        <item itemvalue="PHPUnit.SubscribeToThreadsTest.a_user_can_subscribe_to_threads" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_can_be_unsubscribed_from" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_can_be_subscribed_to" />
       </list>
@@ -248,7 +240,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="82048000" />
+      <workItem from="1599121957091" duration="82824000" />
     </task>
     <servers />
   </component>
@@ -311,22 +303,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600010547721">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600012889161">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600010547721" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600010547720">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600012889161" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600012889161">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600010547720" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600010547720">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600012889161" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600012889161">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600010547720" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600010547720">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600012889161" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600012889161">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600010547720" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600012889161" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598694776906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -343,10 +335,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600010130916" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1600010362055">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1600012528269">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600010362055" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600012528269" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

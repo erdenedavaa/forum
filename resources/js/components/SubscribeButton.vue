@@ -1,11 +1,17 @@
 <template>
-    <button :class="classes" @click="subscribe">Subscribe</button>
+    <button :class="classes" @click="subscribe" v-text="btnText"></button>
 </template>
 
 <script>
 export default {
     name: "SubscribeButton",
     props: ['active'],
+
+    data() {
+        return {
+            isActive: this.active
+        }
+    },
 
     // deerh prop-oor active esehee shiidej bga tul hereggui bolson
     // data() {
@@ -16,7 +22,10 @@ export default {
 
     computed: {
         classes() {
-            return ['btn', this.active ? 'btn-primary' : 'btn-outline-primary'];
+            return ['btn', this.isActive`` ? 'btn-primary' : 'btn-secondary'];
+        },
+        btnText() {
+            return this.isActive ? 'Unsubscribe' : 'Subscribe'
         }
     },
 
@@ -26,9 +35,10 @@ export default {
                 (this.active ? 'delete' : 'post')
             ](location.pathname + '/subscriptions');
 
-            this.active = ! this.active;
+            // this.active = ! this.active;
+            this.isActive = ! this.isActive;
         }
-    },
+    }
 }
 </script>
 

@@ -2327,6 +2327,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 //
 //
 //
@@ -2334,6 +2346,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SubscribeButton",
   props: ['active'],
+  data: function data() {
+    return {
+      isActive: this.active
+    };
+  },
   // deerh prop-oor active esehee shiidej bga tul hereggui bolson
   // data() {
   //     return {
@@ -2342,13 +2359,17 @@ __webpack_require__.r(__webpack_exports__);
   // },
   computed: {
     classes: function classes() {
-      return ['btn', this.active ? 'btn-primary' : 'btn-outline-primary'];
+      return ['btn', this.isActive(_templateObject()) ? 'btn-primary' : 'btn-secondary'];
+    },
+    btnText: function btnText() {
+      return this.isActive ? 'Unsubscribe' : 'Subscribe';
     }
   },
   methods: {
     subscribe: function subscribe() {
-      axios[this.active ? 'delete' : 'post'](location.pathname + '/subscriptions');
-      this.active = !this.active;
+      axios[this.active ? 'delete' : 'post'](location.pathname + '/subscriptions'); // this.active = ! this.active;
+
+      this.isActive = !this.isActive;
     }
   }
 });
@@ -60229,9 +60250,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("button", { class: _vm.classes, on: { click: _vm.subscribe } }, [
-    _vm._v("Subscribe")
-  ])
+  return _c("button", {
+    class: _vm.classes,
+    domProps: { textContent: _vm._s(_vm.btnText) },
+    on: { click: _vm.subscribe }
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
