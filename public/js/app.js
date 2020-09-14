@@ -2327,18 +2327,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 //
 //
 //
@@ -2359,7 +2347,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   // },
   computed: {
     classes: function classes() {
-      return ['btn', this.isActive(_templateObject()) ? 'btn-primary' : 'btn-secondary'];
+      return ['btn', this.isActive ? 'btn-primary' : 'btn-secondary'];
     },
     btnText: function btnText() {
       return this.isActive ? 'Unsubscribe' : 'Subscribe';
@@ -2367,7 +2355,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   },
   methods: {
     subscribe: function subscribe() {
-      axios[this.active ? 'delete' : 'post'](location.pathname + '/subscriptions'); // this.active = ! this.active;
+      axios[this.isActive ? 'delete' : 'post'](location.pathname + '/subscriptions'); // this.active = ! this.active;
 
       this.isActive = !this.isActive;
     }

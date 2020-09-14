@@ -80,7 +80,7 @@
                 1,
 //                $thread->subscription()->where('user_id', auth()->id())->count()
                 // deerh uurchlulttei holbootoigoor daraah baidlaar hiisen
-                $thread->subscription()->where('user_id',$userId)->count()
+                $thread->subscriptions()->where('user_id',$userId)->count()
                 // ene uurchlultiig hiisneer bid never bother signIn user
             );
         }
@@ -96,7 +96,7 @@
 
             $thread->unsubscribe($userId);
 
-            $this->assertCount(0, $thread->subscription);
+            $this->assertCount(0, $thread->subscriptions);
         }
 
         /** @test */

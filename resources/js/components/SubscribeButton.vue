@@ -22,7 +22,7 @@ export default {
 
     computed: {
         classes() {
-            return ['btn', this.isActive`` ? 'btn-primary' : 'btn-secondary'];
+            return ['btn', this.isActive ? 'btn-primary' : 'btn-secondary'];
         },
         btnText() {
             return this.isActive ? 'Unsubscribe' : 'Subscribe'
@@ -32,7 +32,7 @@ export default {
     methods: {
         subscribe() {
             axios[
-                (this.active ? 'delete' : 'post')
+                (this.isActive ? 'delete' : 'post')
             ](location.pathname + '/subscriptions');
 
             // this.active = ! this.active;
