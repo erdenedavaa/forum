@@ -4,18 +4,21 @@
 
 use App\User;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
+//    use Illuminate\Notifications\DatabaseNotification;
+    use Illuminate\Notifications\DatabaseNotification;
+    use Illuminate\Support\Str;
+    use Ramsey\Uuid\Uuid;
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
+    /*
+    |--------------------------------------------------------------------------
+    | Model Factories
+    |--------------------------------------------------------------------------
+    |
+    | This directory should contain each of the model factory definitions for
+    | your application. Factories provide a convenient way to generate new
+    | model instances for testing / seeding your application's database.
+    |
+    */
 
 $factory->define(User::class, function (Faker $faker) {
     return [
@@ -58,5 +61,17 @@ $factory->define(App\Reply::class, function($faker) {
             return factory('App\User')->create()->id;
         },
         'body' => $faker->paragraph
+    ];
+});
+
+$factory->define(DatabaseNotification::class, function($faker) {
+    return [
+        'id' => Uuid::uuid4()->toString(),
+        'type' => 'App\Notifications\ThreadWasUpdated',
+        'notifiable_type' => 'App\User',
+        'notifiable_id' => function() {
+            return auth()->id() ?: factory('App\User')->create()->id;
+        },
+        'data' => ['foo' => 'bar']
     ];
 });

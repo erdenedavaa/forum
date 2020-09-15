@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Filters\ThreadFilters;
-use App\Notifications\ThreadWasupdated;
+use App\Notifications\ThreadWasUpdated;
 use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model

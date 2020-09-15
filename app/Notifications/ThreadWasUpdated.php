@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class ThreadWasupdated extends Notification
+class ThreadWasUpdated extends Notification
 {
     use Queueable;
 
