@@ -67,14 +67,6 @@
         {
             create(DatabaseNotification::class);
 
-            //            // This thread is subscribed by signed in user
-//            $thread = create('App\Thread')->subscribe();
-//
-//            $thread->addReply([
-//                'user_id' => create('App\User')->id,
-//                'body' => 'Some reply here'
-//            ]);
-
             tap(auth()->user(), function($user) {
                 $this->assertCount(1, $user->unreadNotifications);
 
@@ -82,19 +74,5 @@
 
                 $this->assertCount(0, $user->fresh()->unreadNotifications);
             });
-
-            /* Doorhiig deer hyalbarchillaa
-            $user = auth()->user();
-
-            $this->assertCount(1, $user->unreadNotifications);
-
-            $notificationId = $user->unreadNotifications->first()->id;
-
-            $this->delete("/profiles/{$user->name}/notifications/{$notificationId}");
-
-
-            $this->assertCount(0, $user->fresh()->unreadNotifications);
-            */
-
         }
     }

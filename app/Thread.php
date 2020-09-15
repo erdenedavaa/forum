@@ -61,32 +61,11 @@ class Thread extends Model
     public function addReply($reply)
     {
         $reply = $this->replies()->create($reply);
-        // replies_count columniig ihesgeh ehnii arga, nuguuh ni
-        // model event
-        // Model Event ashiglahiin davuu tal ni
-        // replies_count ni addReply bolon busdaas hamaaralgui ajildag bolno
-//        $reply = $this->replies()->create($reply);
-//
-//        $this->increment('replies_count');
-//
-//        return $reply;
 
-        // prepare notifications for all subscribers.
         $this->subscriptions
-            ->filter(function($sub) use ($reply) {
-                return $sub->user_id != $reply->user_id;
-            })
-            ->each->notify($reply);
-//            ->each(function($sub) use ($reply) {
-//                $sub->notify($reply);
-//            });
-
-        // Doorhiig deerheer shinejilj solison.
-//        foreach ($this->subscriptions as $subscription) {
-//            if ($subscription->user_id != $reply->user_id) {
-//                $subscription->user->notify(new ThreadWasupdated($this, $reply));
-//            }
-//        }
+            ->where('user_id', '!=', $reply->user_id)
+            ->each
+            ->notify($reply);
 
         return $reply;
     }
