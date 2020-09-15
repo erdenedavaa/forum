@@ -23,11 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Events/ThreadHasNewReply.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Listeners/NotifyThreadSubscribers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +191,7 @@
       <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.NotificationsTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user">
+  <component name="RunManager" selected="PHPUnit.ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added">
     <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
@@ -207,12 +204,12 @@
       <TestRunner class="Tests\Feature\NotificationsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/NotificationsTest.php" method="a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="NotificationsTest.a_user_can_fetch_their_unread_notifications" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\NotificationsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/NotificationsTest.php" method="a_user_can_fetch_their_unread_notifications" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="NotificationsTest.a_user_can_mark_a_notifications_as_read" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\NotificationsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/NotificationsTest.php" method="a_user_can_mark_a_notifications_as_read" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" method="a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -221,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" />
         <item itemvalue="PHPUnit.NotificationsTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user" />
         <item itemvalue="PHPUnit.Feature" />
         <item itemvalue="PHPUnit.NotificationsTest" />
         <item itemvalue="PHPUnit.NotificationsTest.a_user_can_mark_a_notifications_as_read" />
-        <item itemvalue="PHPUnit.NotificationsTest.a_user_can_fetch_their_unread_notifications" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +238,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="109461000" />
+      <workItem from="1599121957091" duration="110623000" />
     </task>
     <servers />
   </component>
@@ -304,22 +301,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600184938702">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600187221062">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600184938702" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600184938702">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600187221062" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600187221062">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600184938702" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600184938701">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600187221062" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600187221061">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600184938701" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600184938702">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600187221061" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600187221062">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600184938702" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600187221062" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1598694776906">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -332,14 +329,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600184762930">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600186704393">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600184762930" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1600184210664">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600186704393" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1600187146584">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600184210664" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600187146584" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
