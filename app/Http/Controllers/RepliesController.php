@@ -21,15 +21,12 @@ class RepliesController extends Controller
     /**
      * @param $channeld
      * @param \App\Thread $thread
-     * @param \App\Inspections\Spam $spam
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store($channeld, Thread $thread, Spam $spam)
+    public function store($channeld, Thread $thread)
     {
-        $this->validate(request(), ['body' => 'required']);
-
-        $spam->detect(request('body'));
+        $this->validateReply();
 
         $reply = $thread->addReply([
             'body' => request('body'),
@@ -49,6 +46,8 @@ class RepliesController extends Controller
 //        $reply->update(['body' => request('body')]);
         // doorhtoi adilhan
 
+        $this->validateReply();
+
         $reply->update(request(['body']));
     }
 
@@ -67,6 +66,14 @@ class RepliesController extends Controller
 
         return back();
         // butsaah utga ni 302 bdag.
+    }
+
+    protected function validateReply()
+    {
+        $this->validate(request(), ['body' => 'required']);
+
+        resolve(Spam::class)->detect(request('body'));
+        // resolve method iig olon hun meddeggui, same as app()
     }
 
 
