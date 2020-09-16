@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Channel;
 use App\Filters\ThreadFilters;
 use App\Thread;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ThreadsController extends Controller
@@ -82,32 +83,11 @@ class ThreadsController extends Controller
      */
     public function show($channel, Thread $thread)
     {
-//        return $thread->append('isSubscribedTo');
-        // deerh ni thread json deer 'isSubscribedTo' iin utgiig
-        //oruulj irne gesen ug
-        // Hervee ene ni always be included iig husej bval
-        // Thread model deer $appends deer zaaj ugnu.
+        if (auth()->check()) {
+            auth()->user()->read($thread);
+        }
 
-//        dd($thread->getIsSubscribedToAttribute());
-
-//        return $thread;
-        // Ene ni json utga butsaana
-
-//        return $thread->replies;
-
-//        return $thread->load('replies');
-
-//        return Thread::withCount('replies')->find(52);
-
-//        return $thread->replyCount;
-
-//        return $thread;
-
-        return  view('threads.show', [
-            'thread' => $thread,
-            // 'replies' => $thread->replies()->paginate(20)
-            // ajax ashiglasan tul hereggui bolson
-        ]);
+        return  view('threads.show', compact('thread'));
     }
 
     /**

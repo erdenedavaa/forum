@@ -8,7 +8,15 @@
                     <div class="card mb-3">
                         <div class="card-header d-flex justify-content-between align-items-center bg-transparent">
                             <h4>
-                                <a href="{{ $thread->path() }}">{{ $thread->title }}</a>
+                                <a href="{{ $thread->path() }}">
+                                    @if ($thread->hasUpdatesFor(auth()->user()))
+                                        <strong>
+                                            {{ $thread->title }}
+                                        </strong>
+                                    @else
+                                        {{ $thread->title }}
+                                    @endif
+                                </a>
                             </h4>
 
                             <a href="{{ $thread->path() }}">
