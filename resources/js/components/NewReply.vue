@@ -42,14 +42,9 @@ export default {
     methods: {
         addReply() {
             axios.post(location.pathname + '/replies', { body: this.body })
-                // .then(response => {
-                //     this.body = '';
-                //
-                //     flash('Your reply has been posted.');
-                //
-                //     this.$emit('created', response.data);
-
-            // ES20!5 daraah shorthand bii bolson
+                .catch(error => {
+                    flash(error.response.data, 'danger');
+                })
                 .then( ({data}) => {
                     this.body = '';
 

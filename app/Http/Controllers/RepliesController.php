@@ -21,23 +21,32 @@ class RepliesController extends Controller
     /**
      * @param $channeld
      * @param \App\Thread $thread
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Database\Eloquent\Model|\Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store($channeld, Thread $thread)
     {
-        $this->validateReply();
+        try {
+            $this->validateReply();
 
-        $reply = $thread->addReply([
-            'body' => request('body'),
-            'user_id' => auth()->id()
-        ]);
-
-        if (request()->expectsJson()) {
-            return $reply->load('owner');
+            $reply = $thread->addReply([
+                'body' => request('body'),
+                'user_id' => auth()->id()
+            ]);
+        } catch(\Exception $e) {
+            return response(
+                'Sorry, your reply could not be saved at this time.', 422
+            );
         }
 
-        return back()->with('flash', 'Your reply has been left.');
+        return $reply->load('owner');
+        // ene ni doorhtoi adil
+
+//        if (request()->expectsJson()) {
+//            return $reply->load('owner');
+//        }
+
+//        return back()->with('flash', 'Your reply has been left.');
     }
 
     public function update(Reply $reply)
@@ -46,9 +55,17 @@ class RepliesController extends Controller
 //        $reply->update(['body' => request('body')]);
         // doorhtoi adilhan
 
-        $this->validateReply();
+        try {
+            $this->validateReply();
 
-        $reply->update(request(['body']));
+            $reply->update(request(['body']));
+        } catch(\Exception $e) {
+            return response(
+                'Sorry, your reply could not be saved at this time.', 422
+            );
+        }
+
+
     }
 
     public function destroy(Reply $reply)
