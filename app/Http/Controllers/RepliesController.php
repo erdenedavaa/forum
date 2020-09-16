@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Inspections\Spam;
 use App\Reply;
-use App\Spam;
 use App\Thread;
 use Illuminate\Http\Request;
 
@@ -21,7 +21,7 @@ class RepliesController extends Controller
     /**
      * @param $channeld
      * @param \App\Thread $thread
-     * @param \App\Http\Controllers\Spam $spam
+     * @param \App\Inspections\Spam $spam
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
