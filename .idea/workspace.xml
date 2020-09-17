@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/ThrottleException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreatePostRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/SpamFree.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/SpamFree.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,13 +190,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/app/Http/Forms" />
       <recent name="$PROJECT_DIR$/app/Inspections" />
       <recent name="$PROJECT_DIR$/resources/js/pages" />
       <recent name="$PROJECT_DIR$/resources/js/components" />
-      <recent name="$PROJECT_DIR$/resources/views/profiles" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ParticipateInThreadsTest.users_may_only_reply_a_maximum_of_once_per_minute">
+  <component name="RunManager" selected="PHPUnit.ParticipateInThreadsTest.a_reply_requires_a_body">
+    <configuration name="ParticipateInThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="ParticipateInThreadsTest.a_reply_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ParticipateInThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ParticipateInThreadsTest.php" method="a_reply_requires_a_body" scope="Method" />
       <method v="2" />
@@ -216,21 +218,17 @@
       <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_knows_if_it_was_just_published" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.a_user_can_fetch_their_most_recent_reply" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="a_user_can_fetch_their_most_recent_reply" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ParticipateInThreadsTest.users_may_only_reply_a_maximum_of_once_per_minute" />
-        <item itemvalue="PHPUnit.ReplyTest.it_knows_if_it_was_just_published" />
-        <item itemvalue="PHPUnit.UserTest.a_user_can_fetch_their_most_recent_reply" />
         <item itemvalue="PHPUnit.ParticipateInThreadsTest.a_reply_requires_a_body" />
+        <item itemvalue="PHPUnit.ParticipateInThreadsTest" />
+        <item itemvalue="PHPUnit.ParticipateInThreadsTest.users_may_only_reply_a_maximum_of_once_per_minute" />
         <item itemvalue="PHPUnit.ParticipateInThreadsTest.replies_that_contain_spam_may_not_be_created" />
+        <item itemvalue="PHPUnit.ReplyTest.it_knows_if_it_was_just_published" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +244,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="134239000" />
+      <workItem from="1599121957091" duration="138519000" />
     </task>
     <servers />
   </component>
@@ -277,18 +275,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1599751039432" />
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1600183894801">
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1600357565679">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1600183894801" />
+    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1600357565679" />
     <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598620927543">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1598620927543" />
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600106828248">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600359313120">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1600106828248" />
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1600359313120" />
     <state x="614" y="223" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600346735499">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -317,26 +315,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600353725176">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600360083984">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600353725176" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600353725176">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600360083984" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600360083984">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600353725176" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600353725176">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600360083984" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600360083984">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600353725176" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600353725176">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600360083984" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600360083984">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600353725176" />
-    <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600271711857">
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600360083984" />
+    <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600357646200">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1600271711857" />
+    <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1600357646200" />
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1600351462273">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -345,26 +343,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600353743261">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600360155686">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600353743261" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1600352816156">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600360155686" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1600359966980">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600352816156" />
-    <state x="577" y="216" width="787" height="580" key="find.popup" timestamp="1600351831432">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600359966980" />
+    <state x="577" y="216" width="787" height="580" key="find.popup" timestamp="1600358027016">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="577" y="216" width="787" height="580" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1600351831432" />
+    <state x="577" y="216" width="787" height="580" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1600358027016" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1600352820491">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1600359682182">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600352820491" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600359682182" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
