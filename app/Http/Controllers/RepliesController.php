@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Inspections\Spam;
 use App\Reply;
 use App\Thread;
 use Illuminate\Http\Request;
@@ -27,7 +26,8 @@ class RepliesController extends Controller
     public function store($channeld, Thread $thread)
     {
         try {
-            $this->validateReply();
+            request()->validate(['body' => 'required|spamfree']);
+//            $this->validate(request(), ['body' => 'required|spamfree']);
 
             $reply = $thread->addReply([
                 'body' => request('body'),
@@ -56,7 +56,7 @@ class RepliesController extends Controller
         // doorhtoi adilhan
 
         try {
-            $this->validateReply();
+            $this->validate(request(), ['body' => 'required|spamfree']);
 
             $reply->update(request(['body']));
         } catch(\Exception $e) {
@@ -84,16 +84,5 @@ class RepliesController extends Controller
         return back();
         // butsaah utga ni 302 bdag.
     }
-
-    protected function validateReply()
-    {
-        $this->validate(request(), ['body' => 'required']);
-
-        resolve(Spam::class)->detect(request('body'));
-        // resolve method iig olon hun meddeggui, same as app()
-    }
-
-
-
 }
 
