@@ -41,6 +41,6 @@ class SpamFree implements Rule
      */
     public function message()
     {
-//        return 'The :attribute contains spam from ongoo';
+        return 'The :attribute contains spam from ongoo';
     }
 }

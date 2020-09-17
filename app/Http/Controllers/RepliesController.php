@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Reply;
+use App\Rules\SpamFree;
 use App\Thread;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class RepliesController extends Controller
 {
@@ -25,9 +27,14 @@ class RepliesController extends Controller
      */
     public function store($channeld, Thread $thread)
     {
+        if (Gate::denies('create', new Reply)) {
+            return response(
+                'You are posting too frequently. Please take a break. :)', 422
+            );
+        }
+
         try {
             request()->validate(['body' => 'required|spamfree']);
-//            $this->validate(request(), ['body' => 'required|spamfree']);
 
             $reply = $thread->addReply([
                 'body' => request('body'),
@@ -40,13 +47,6 @@ class RepliesController extends Controller
         }
 
         return $reply->load('owner');
-        // ene ni doorhtoi adil
-
-//        if (request()->expectsJson()) {
-//            return $reply->load('owner');
-//        }
-
-//        return back()->with('flash', 'Your reply has been left.');
     }
 
     public function update(Reply $reply)
@@ -56,7 +56,10 @@ class RepliesController extends Controller
         // doorhtoi adilhan
 
         try {
-            $this->validate(request(), ['body' => 'required|spamfree']);
+//            $this->validate(request(), ['body' => 'required|spamfree']);
+            request()->validate([
+                'body' => ['required', new SpamFree]
+            ]);
 
             $reply->update(request(['body']));
         } catch(\Exception $e) {
