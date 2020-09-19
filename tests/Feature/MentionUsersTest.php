@@ -25,7 +25,7 @@
 
             // And JohnDoe replies and mentions @JaneDoe
             $reply = make('App\Reply', [
-                'body' => '@JaneDoe look at this. Also @FrankDoe'
+                'body' => '@JaneDoe look at this. Also @whodoesnotexist'
             ]);
 
             $this->json('post', $thread->path() . '/replies', $reply->toArray());

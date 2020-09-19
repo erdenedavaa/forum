@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ThreadsController extends Controller
 {
     /**
-     * ThreadsController constructor.
+     * Create a new ThreadsController instance
      */
     public function __construct(){
 //        $this->middleware('auth')->only(['create', 'store']);
@@ -55,9 +55,7 @@ class ThreadsController extends Controller
      */
     public function store(Request $request)
     {
-//        dd(request()->all());
-
-        $this->validate($request, [
+        $request->validate([
             'title' => 'required|spamfree',
             'body' => 'required|spamfree',
             'channel_id' => 'required|exists:channels,id'
