@@ -24,12 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/NotifyMentionedUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/NotifyMentionedUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,25 +197,25 @@
       <recent name="$PROJECT_DIR$/resources/js/components" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.MentionUsersTest">
+  <component name="RunManager" selected="PHPUnit.ReplyTest">
     <configuration name="MentionUsersTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MentionUsersTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MentionUsersTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" method="mentioned_users_in_a_reply_are_notified" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="NotificationsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\NotificationsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/NotificationsTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="NotificationsTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\NotificationsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/NotificationsTest.php" method="a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="ReplyTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="ReplyTest.it_can_detect_all_mentioned_users_in_the_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_can_detect_all_mentioned_users_in_the_body" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ReplyTest.it_wraps_mentioned_usernames_in_the_body_within_anchor_tags" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_wraps_mentioned_usernames_in_the_body_within_anchor_tags" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -225,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ReplyTest" />
+        <item itemvalue="PHPUnit.ReplyTest.it_can_detect_all_mentioned_users_in_the_body" />
+        <item itemvalue="PHPUnit.ReplyTest.it_wraps_mentioned_usernames_in_the_body_within_anchor_tags" />
         <item itemvalue="PHPUnit.MentionUsersTest" />
         <item itemvalue="PHPUnit.NotificationsTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_new_reply_that_is_not_by_the_current_user" />
-        <item itemvalue="PHPUnit.NotificationsTest" />
-        <item itemvalue="PHPUnit.MentionUsersTest.mentioned_users_in_a_reply_are_notified" />
-        <item itemvalue="PHPUnit.ReplyTest.it_can_detect_all_mentioned_users_in_the_body" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +244,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="150093000" />
+      <workItem from="1599121957091" duration="153251000" />
     </task>
     <servers />
   </component>
@@ -272,10 +271,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="456" y="285" width="676" height="352" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.23.1440.877@0.23.1440.877" timestamp="1599832358096" />
-    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599751039432">
+    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1600612208332">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1599751039432" />
+    <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1600612208332" />
     <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1600439114828">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -316,22 +315,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600527075728">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600611795710">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600527075728" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600527075728">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600611795710" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600611795710">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600527075728" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600527075728">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600611795710" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600611795710">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600527075728" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600527075728">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600611795710" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600611795710">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600527075728" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600611795710" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600357646200">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -344,14 +343,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600525596731">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1600609864255">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600525596731" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1600527150499">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1600610244268">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600527150499" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600610244268" />
     <state x="577" y="216" width="787" height="580" key="find.popup" timestamp="1600358027016">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -360,10 +359,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1600525072270">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1600610253917">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600525072270" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600610253917" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
