@@ -149,7 +149,7 @@ class ThreadsController extends Controller
 
 //        $threads = $threads->get();
 
-        return $threads->get();
+        return $threads->paginate(25);
     }
 
 }
