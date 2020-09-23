@@ -7,7 +7,11 @@
                 <div class="col-md-8">
                     <div class="card mb-md-5">
                         <div class="card-header d-flex justify-content-between">
+
+
                             <div class="d-flex align-items-center">
+                                <img src="{{ $thread->creator->avatar() }}" alt="{{ $thread->creator->name }}" width="25" height="25" class="mr-1">
+
                                 <a href="{{ route('profile', $thread->creator) }}"
                                    class="pr-1">{{ $thread->creator->name }}</a> posted:
                                 {{ $thread->title }}

@@ -16,6 +16,8 @@
             auth()->user()->update([
                 'avatar_path' => request()->file('avatar')->store('avatars', 'public')
             ]);
+            // file upload named 'avatar', grab that temporary file to storage
+            // folder called 'avatars', use 'public' driver
 
             return back();
         }

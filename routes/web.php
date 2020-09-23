@@ -54,7 +54,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
 
 Route::get('/api/users', 'Api\UsersController@index');
-Route::post('/api/users/{user}/avatar', 'Api\UserAvatarController@store')->middleware('auth');
+Route::post('/api/users/{user}/avatar', 'Api\UserAvatarController@store')->middleware('auth')->name('avatar');
 
 Route::get('/profiles/{user}/notifications', 'UserNotificationsController@index');
 Route::delete('/profiles/{user}/notifications/{notification}', 'UserNotificationsController@destroy');
