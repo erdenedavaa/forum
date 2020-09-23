@@ -23,10 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,25 +197,25 @@
       <recent name="$PROJECT_DIR$/resources/js/components" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered">
-    <configuration name="MentionUsersTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MentionUsersTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.AddAvatarTest.a_user_may_add_an_avatar_to_their_profile">
+    <configuration name="AddAvatarTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_popularity" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_popularity" scope="Method" />
+    <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_user_may_add_an_avatar_to_their_profile" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AddAvatarTest.a_valid_avatar_must_be_provided" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_valid_avatar_must_be_provided" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AddAvatarTest.only_members_can_add_avatars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="only_members_can_add_avatars" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ReadThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_those_that_are_unanswered" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReplyTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReplyTest.it_can_detect_all_mentioned_users_in_the_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_can_detect_all_mentioned_users_in_the_body" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -222,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" />
+        <item itemvalue="PHPUnit.AddAvatarTest" />
+        <item itemvalue="PHPUnit.AddAvatarTest.a_valid_avatar_must_be_provided" />
+        <item itemvalue="PHPUnit.AddAvatarTest.only_members_can_add_avatars" />
         <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" />
-        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_popularity" />
-        <item itemvalue="PHPUnit.MentionUsersTest" />
-        <item itemvalue="PHPUnit.ReplyTest" />
-        <item itemvalue="PHPUnit.ReplyTest.it_can_detect_all_mentioned_users_in_the_body" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +244,7 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="161053000" />
+      <workItem from="1599121957091" duration="165409000" />
     </task>
     <servers />
   </component>
@@ -313,22 +315,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600707468770">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600875470367">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600707468769">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1600875470367" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600875470366">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600707468769">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1600875470366" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600875470366">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600707468769">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1600875470366" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600875470366">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1600875470366" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600357646200">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -345,24 +351,25 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
-    <state width="584" height="469" key="SwitcherDM" timestamp="1600794156021">
+    <state width="584" height="469" key="SwitcherDM" timestamp="1600875350923">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600707601070" />
-    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1600794156021" />
-    <state x="577" y="216" width="787" height="580" key="find.popup" timestamp="1600358027016">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1600875350923" />
+    <state x="673" y="249" width="919" height="680" key="find.popup" timestamp="1600872752845">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="216" width="787" height="580" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1600358027016" />
+    <state x="673" y="249" width="919" height="680" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1600872752845" />
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog" timestamp="1598887527378">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1600797760139">
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1600875353380">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600707270248" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1600797760139" />
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1600875353380" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
