@@ -6,20 +6,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="modal-header mb-10">
-                    <h1>
-                        {{ $profileUser->name }}
-                    </h1>
-
-                    @can('update', $profileUser)
-                        <form method="POST" action="{{ route('avatar', $profileUser) }}" enctype="multipart/form-data">
-                            @csrf
-                            <input type="file" name="avatar">
-
-                            <button type="submit" class="btn btn-secondary">Add Avatar</button>
-                        </form>
-                    @endcan
-
-                    <img src="{{ asset($profileUser->avatar_path) }}" alt="" width="50" height="50">
+                    <avatar-form :user="{{ $profileUser }}"></avatar-form>
                 </div>
 
                 @forelse ($activities as $date => $activity)

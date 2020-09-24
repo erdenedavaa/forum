@@ -19,7 +19,7 @@
             // file upload named 'avatar', grab that temporary file to storage
             // folder called 'avatars', use 'public' driver
 
-            return back();
+            return response([], 204);
         }
 
     }
