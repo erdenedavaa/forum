@@ -23,12 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j">
-      <change afterPath="$PROJECT_DIR$/app/RecordsVisits.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Visits.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RecordsVisits.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +249,7 @@
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
       <workItem from="1599121957091" duration="179620000" />
-      <workItem from="1601019506540" duration="11648000" />
+      <workItem from="1601019506540" duration="13117000" />
     </task>
     <servers />
   </component>
@@ -327,26 +325,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601052267436">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601053894992">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601052267436" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601052267436">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601053894992" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601053894992">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601052267436" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601052267436">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601053894992" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601053894992">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601052267436" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601052267436">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601053894992" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601053894992">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601052267436" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601053894992" />
     <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -363,11 +361,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1140" height="349" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473662" />
-    <state x="810" y="223" key="NewPhpClassDialog" timestamp="1601051604969">
+    <state x="810" y="223" key="NewPhpClassDialog" timestamp="1601052946425">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1600357646200" />
-    <state x="810" y="223" key="NewPhpClassDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601051604969" />
+    <state x="810" y="223" key="NewPhpClassDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601052946425" />
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1600442417887">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -381,11 +379,11 @@
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
     <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1601051891853" />
-    <state width="584" height="469" key="SwitcherDM" timestamp="1601051889615">
+    <state width="584" height="469" key="SwitcherDM" timestamp="1601053729069">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600707601070" />
-    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601051889615" />
+    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601053729069" />
     <state x="673" y="249" width="919" height="680" key="find.popup" timestamp="1600872752845">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
