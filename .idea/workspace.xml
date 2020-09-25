@@ -22,18 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/avatars/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AvatarForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
+    <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j">
+      <change afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +167,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gB6CGrz5XUNHAd8KcvNNqJPlKu" />
@@ -206,21 +207,21 @@
       <recent name="$PROJECT_DIR$/resources/js/pages" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads">
-    <configuration name="AddAvatarTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read">
     <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_user_may_add_an_avatar_to_their_profile" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="AddAvatarTest.a_valid_avatar_must_be_provided" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_valid_avatar_must_be_provided" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThreadsTest.php" method="an_authenticated_user_can_create_new_forum_threads" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TrendingThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\TrendingThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\TrendingThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" method="it_increments_a_threads_score_each_time_it_is_read" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UserTest.a_user_can_determine_their_avatar_path" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -233,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" />
+        <item itemvalue="PHPUnit.TrendingThreadsTest" />
         <item itemvalue="PHPUnit.CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads" />
         <item itemvalue="PHPUnit.UserTest.a_user_can_determine_their_avatar_path" />
         <item itemvalue="PHPUnit.AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" />
-        <item itemvalue="PHPUnit.AddAvatarTest" />
-        <item itemvalue="PHPUnit.AddAvatarTest.a_valid_avatar_must_be_provided" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +254,8 @@
       <workItem from="1598621849555" duration="11333000" />
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
-      <workItem from="1599121957091" duration="177895000" />
+      <workItem from="1599121957091" duration="179620000" />
+      <workItem from="1601019506540" duration="7146000" />
     </task>
     <servers />
   </component>
@@ -285,14 +287,16 @@
     </state>
     <state x="414" y="123" width="924" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1600612208332" />
     <state x="483" y="140" width="1078" height="793" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1600956593414" />
-    <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1600439114828">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="797" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1601041815625">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="683" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1600439114828" />
-    <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598620927543">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="797" y="212" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1601041815625" />
+    <state x="756" y="235" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601019449877">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1598620927543" />
+    <state x="756" y="235" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601019449877" />
     <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600359313120">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -326,42 +330,42 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1600956423110">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601043184194">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1600956423110" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1600956423110">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184194" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601043184193">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1600956423110" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1600956423109">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184193" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601043184193">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1600956423109" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1600956423110">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184193" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601043184194">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1600956423110" />
-    <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1600956049324">
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184194" />
+    <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1140" height="349" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1600956049324" />
-    <state width="1140" height="349" key="GridCell.Tab.1.center" timestamp="1600956049324">
+    <state width="1140" height="349" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473662" />
+    <state width="1140" height="349" key="GridCell.Tab.1.center" timestamp="1601019473661">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1140" height="349" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1600956049324" />
-    <state width="1140" height="349" key="GridCell.Tab.1.left" timestamp="1600956049323">
+    <state width="1140" height="349" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473661" />
+    <state width="1140" height="349" key="GridCell.Tab.1.left" timestamp="1601019473661">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1140" height="349" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1600956049323" />
-    <state width="1140" height="349" key="GridCell.Tab.1.right" timestamp="1600956049324">
+    <state width="1140" height="349" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473661" />
+    <state width="1140" height="349" key="GridCell.Tab.1.right" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1140" height="349" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1600956049324" />
+    <state width="1140" height="349" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473662" />
     <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600357646200">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -374,16 +378,16 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="525" y="230" width="630" height="614" key="StructurePopup" timestamp="1600881200362">
+    <state x="525" y="230" width="630" height="614" key="StructurePopup" timestamp="1601043850476">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
-    <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1600881200362" />
-    <state width="584" height="469" key="SwitcherDM" timestamp="1600953772520">
+    <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1601043850476" />
+    <state width="584" height="469" key="SwitcherDM" timestamp="1601022843600">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600707601070" />
-    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1600953772520" />
+    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601022843600" />
     <state x="673" y="249" width="919" height="680" key="find.popup" timestamp="1600872752845">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -393,11 +397,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1600956559089">
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601040070010">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600707270248" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1600956559089" />
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601040070010" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

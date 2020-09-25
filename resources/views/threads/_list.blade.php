@@ -1,4 +1,4 @@
-<div class="col-md-8">
+<div class="">
     @forelse ($threads as $thread)
         <div class="card mb-3">
             <div class="card-header d-flex justify-content-between align-items-center bg-transparent">
