@@ -23,17 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j">
-      <change afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Trending.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +202,7 @@
       <recent name="$PROJECT_DIR$/resources/js/pages" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read">
+  <component name="RunManager" selected="PHPUnit.TrendingThreadsTest">
     <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\AddAvatarTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_user_may_add_an_avatar_to_their_profile" scope="Method" />
       <method v="2" />
@@ -234,8 +229,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" />
         <item itemvalue="PHPUnit.TrendingThreadsTest" />
+        <item itemvalue="PHPUnit.TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" />
         <item itemvalue="PHPUnit.CreateThreadsTest.an_authenticated_user_can_create_new_forum_threads" />
         <item itemvalue="PHPUnit.UserTest.a_user_can_determine_their_avatar_path" />
         <item itemvalue="PHPUnit.AddAvatarTest.a_user_may_add_an_avatar_to_their_profile" />
@@ -255,7 +250,7 @@
       <workItem from="1598693735929" duration="24859000" />
       <workItem from="1599063078701" duration="7440000" />
       <workItem from="1599121957091" duration="179620000" />
-      <workItem from="1601019506540" duration="7146000" />
+      <workItem from="1601019506540" duration="9385000" />
     </task>
     <servers />
   </component>
@@ -330,26 +325,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601043184194">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601048561356">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184194" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601043184193">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601048561356" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601048561355">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184193" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601043184193">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601048561355" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601048561355">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184193" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601043184194">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601048561355" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601048561356">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601043184194" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601048561356" />
     <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -366,10 +361,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1140" height="349" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601019473662" />
-    <state x="694" y="194" key="NewPhpClassDialog" timestamp="1600357646200">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="810" y="223" key="NewPhpClassDialog" timestamp="1601047026940">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="694" y="194" key="NewPhpClassDialog/0.23.1440.877@0.23.1440.877" timestamp="1600357646200" />
+    <state x="810" y="223" key="NewPhpClassDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601047026940" />
     <state x="19" y="100" width="1421" height="722" key="SettingsEditor" timestamp="1600442417887">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -397,11 +393,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601040070010">
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601048376424">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600707270248" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601040070010" />
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601048376424" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
