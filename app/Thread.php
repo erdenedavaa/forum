@@ -128,9 +128,9 @@ class Thread extends Model
         return $this->updated_at > cache($key);
     }
 
-    public function visits()
-    {
-        return new Visits($this);
-        // Thread $thread iig shuud oruulj bn
-    }
+//    public function visits()
+//    {
+//        return new Visits($this);
+//        // Thread $thread iig shuud oruulj bn
+//    }
 }

@@ -93,7 +93,8 @@ class ThreadsController extends Controller
 
         $trending->push($thread);
 
-        $thread->visits()->record();
+        $thread->increment('visits');
+        // increment() ni laravel-d tsaanaasaa bdag
 
         return  view('threads.show', compact('thread'));
     }
