@@ -47,6 +47,8 @@ class CreateThreadsTest extends TestCase
 
         $response = $this->post('threads', $thread->toArray());
 
+//        dd($response->headers->get('Location'));
+
         // Then we visit the thread page
         $this->get($response->headers->get('Location'))
             ->assertSee($thread->title)
