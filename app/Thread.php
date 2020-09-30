@@ -137,6 +137,7 @@ class Thread extends Model
     }
 
     // This is triggered automatically when assign, when set a value to this SLUG
+    // BELOW IS NOT PERSISTING
     public function setSlugAttribute($value)
     {
         $slug = str_slug($value);
@@ -148,5 +149,10 @@ class Thread extends Model
 //        var_dump($slug);
 
         $this->attributes['slug'] = $slug;
+    }
+
+    public function markBestReply(Reply $reply)
+    {
+        $this->update(['best_reply_id' => $reply->id]);
     }
 }

@@ -35,6 +35,8 @@
     Route::patch('/replies/{reply}', 'RepliesController@update');
     Route::delete('/replies/{reply}', 'RepliesController@destroy');
 
+    Route::post('/replies/{reply}/best', 'BestRepliesController@store')->name('best-replies.store');
+
     Route::post('/threads/{channel}/{thread}/subscriptions', 'ThreadsSubscriptionsController@store')->middleware('auth');
     Route::delete('/threads/{channel}/{thread}/subscriptions', 'ThreadsSubscriptionsController@destroy')->middleware('auth');
     // Ingesneer route model binding iig ($channelId, Thread $thread) gesen mayagaar hiine gesen ug
