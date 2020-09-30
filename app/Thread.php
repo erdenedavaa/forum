@@ -134,6 +134,30 @@ class Thread extends Model
         return 'slug';
     }
 
+    // This is triggered automatically when assign, when set a value to this SLUG
+    public function setSlugAttribute($value)
+    {
+        if (static::whereSlug($slug = str_slug($value))->exists()) {
+            $slug = $this->incrementSlug($slug);
+        }
+
+        $this->attributes['slug'] = $slug;
+    }
+
+
+    public function incrementSlug($slug)
+    {
+        $max = static::whereTitle($this->title)->latest('id')->value('slug'); // foo-title-5
+
+        if (is_numeric($max[-1])) {
+            return preg_replace_callback('/(\d+)$/', function ($matches) {
+                return $matches[0] + 1;
+            }, $max);
+        }
+
+        return "{$slug}-2";
+    }
+
 //    public function visits()
 //    {
 //        return new Visits($this);
