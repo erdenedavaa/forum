@@ -32,7 +32,7 @@ class Reply extends Model
     }
 
 
-    protected $appends = ['favoritesCount', 'isFavorited', 'isUserLoggedIn'];
+    protected $appends = ['favoritesCount', 'isFavorited', 'isUserLoggedIn', 'isBest'];
 
     public function owner()
     {
@@ -69,6 +69,12 @@ class Reply extends Model
     public function isBest()
     {
         return $this->thread->best_reply_id == $this->id;
+    }
+
+    // deeshee json ruu append hiihiin tuld
+    public function getIsBestAttribute()
+    {
+        return $this->isBest();
     }
 
 }

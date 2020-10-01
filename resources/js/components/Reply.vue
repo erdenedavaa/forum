@@ -63,7 +63,7 @@
                 id: this.data.id,
                 body: this.data.body,
                 isDeleted: false,
-                isBest: false,
+                isBest: this.data.isBest,
                 reply: this.data
             };
         },
@@ -77,8 +77,15 @@
             //     return window.App.signedIn;
             // }
             // app.js deer VUe.prototype deer zaagaad ugsun tul global bolchij bga ium shig bn.
+        },
 
-
+        created() {
+            window.events.$on('best-reply-selected', id => {
+                this.isBest = (id === this.id);
+            });
+            // utga ni herev best-reply-selected iin id ni my id-tai equal bval
+            // bi best reply bolno, return true, or return false
+            // then update and rerender
         },
 
         methods: {
@@ -106,7 +113,13 @@
             },
 
             markBestReply() {
-                this.isBest = true;
+                // this.isBest = true;
+                // created() deer zaagaad ugj bga tul hereggui bolloo
+
+                axios.post('/replies/' + this.data.id + '/best');
+
+                // server deer persist hiigdehed doorhiig shuud FIRE UP hiine
+                window.events.$emit('best-reply-selected', this.data.id);
             }
         }
     }

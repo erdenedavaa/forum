@@ -2423,7 +2423,7 @@ __webpack_require__.r(__webpack_exports__);
       id: this.data.id,
       body: this.data.body,
       isDeleted: false,
-      isBest: false,
+      isBest: this.data.isBest,
       reply: this.data
     };
   },
@@ -2435,6 +2435,15 @@ __webpack_require__.r(__webpack_exports__);
     // }
     // app.js deer VUe.prototype deer zaagaad ugsun tul global bolchij bga ium shig bn.
 
+  },
+  created: function created() {
+    var _this = this;
+
+    window.events.$on('best-reply-selected', function (id) {
+      _this.isBest = id === _this.id;
+    }); // utga ni herev best-reply-selected iin id ni my id-tai equal bval
+    // bi best reply bolno, return true, or return false
+    // then update and rerender
   },
   methods: {
     update: function update() {
@@ -2452,7 +2461,11 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('deleted', this.data.id);
     },
     markBestReply: function markBestReply() {
-      this.isBest = true;
+      // this.isBest = true;
+      // created() deer zaagaad ugj bga tul hereggui bolloo
+      axios.post('/replies/' + this.data.id + '/best'); // server deer persist hiigdehed doorhiig shuud FIRE UP hiine
+
+      window.events.$emit('best-reply-selected', this.data.id);
     }
   }
 });
