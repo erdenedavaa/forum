@@ -23,6 +23,7 @@ class CreateThreadsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->unsignedBigInteger('best_reply_id')->nullable();
+            $table->boolean('locked')->default(false);
             $table->timestamps();
 
             // reply устсан үед thread-тэй холбоотэй мэдээллүүд автоматаар устдаг байх нь хамаагүй илүү

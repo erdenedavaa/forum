@@ -60,6 +60,9 @@ class Thread extends Model
     public function addReply($reply)
     {
 //        (new \App\Spam)->detect($reply->body);
+//        if ($this->locked) {
+//            throw new \Exception('Thread is locked');
+//        }
 
         $reply = $this->replies()->create($reply);
 
@@ -70,6 +73,11 @@ class Thread extends Model
 //        event(new ThreadHasNewReply($this, $reply));
 
         return $reply;
+    }
+
+    public function lock()
+    {
+        $this->update(['locked' => true]);
     }
 
 //    public function notifySubscribers($reply)
