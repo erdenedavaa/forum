@@ -1,8 +1,8 @@
 <template>
     <div :id="'reply-'+id" class="my-2" v-bind:class="{ 'd-none': isDeleted }">
-        <div class="card">
-            <div class="card-header">
-                <div class="d-flex justify-content-between align-items-center">
+        <div class="card" >
+            <div class="card-header"  :class="isBest? 'bg-success text-white' : ''">
+                <div class="d-flex justify-content-between align-items-center" >
                     <h6 class="mb-0">
                         <a :href="'/profiles/'+data.owner.name"
                             v-text="data.owner.name">
@@ -34,9 +34,13 @@
                 <div v-else v-html="body"></div>
             </div>
 
-            <div class="card-footer d-flex" v-if="canUpdate">
-                <button class="btn btn-secondary btn-sm mr-2" @click="editing = true">Edit</button>
-                <button class="btn btn-danger btn-sm" @click="destroy">Delete</button>
+            <div class="card-footer d-flex">
+                <div v-if="canUpdate">
+                    <button class="btn btn-secondary btn-sm mr-2" @click="editing = true">Edit</button>
+                    <button class="btn btn-danger btn-sm mr-2" @click="destroy">Delete</button>
+                </div>
+
+                <button class="btn btn-sm ml-auto" @click="markBestReply" v-show="! isBest">Best Reply?</button>
             </div>
         </div>
     </div>
@@ -58,7 +62,8 @@
                 editing: false,
                 id: this.data.id,
                 body: this.data.body,
-                isDeleted: false
+                isDeleted: false,
+                isBest: false
             };
         },
 
@@ -99,6 +104,10 @@
 
                 // Jeffrey solution
                 this.$emit('deleted', this.data.id);
+            },
+
+            markBestReply() {
+                this.isBest = true;
             }
         }
     }
