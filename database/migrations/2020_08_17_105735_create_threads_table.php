@@ -24,6 +24,12 @@ class CreateThreadsTable extends Migration
             $table->text('body');
             $table->unsignedBigInteger('best_reply_id')->nullable();
             $table->timestamps();
+
+            // reply устсан үед thread-тэй холбоотэй мэдээллүүд автоматаар устдаг байх нь хамаагүй илүү
+            $table->foreign('best_reply_id')
+                ->references('id')
+                ->on('replies')
+                ->onDelete('set null'); // cascade гэж болохгүй
         });
     }
 

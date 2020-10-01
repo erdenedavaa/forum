@@ -46,4 +46,25 @@
 
             $this->assertFalse($replies[1]->fresh()->isBest());
         }
+
+        /** @test */
+        function if_a_best_reply_is_deleted_then_the_thread_is_properly_updated_to_reflect_that()
+        {
+            $this->signIn();
+
+            $reply = create('App\Reply', ['user_id' => auth()->id()]);
+            // create a reply, thread is created behind scenes
+
+            $reply->thread->markBestReply($reply);
+
+            // When we delete the reply
+            $this->deleteJson(route('replies.destroy', $reply)); // $reply->id  gej bolno. gehdee laravel ni
+            // automataar collection-oos id-g fetch hiij chaddag
+
+            // Then the thread should be updated.
+            $this->assertNull($reply->thread->fresh()->best_reply_id);
+
+
+            // Хоёр янзын арга зам байгаа. Нэгд, PHP side, нөгөө нь DATABASE level
+        }
     }

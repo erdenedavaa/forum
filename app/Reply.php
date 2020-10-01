@@ -26,6 +26,11 @@ class Reply extends Model
         });
 
         static::deleted(function ($reply) {
+//            if ($reply->isBest()) {
+//                $reply->thread->update(['best_reply_id' => null]);
+//            }
+            // Дээрх арга нь PHP level арга, гэхдээ database level is preferred by Jeffrey
+
             $reply->thread->decrement('replies_count');
 //            dd($reply->thread->replies_count);
         });
