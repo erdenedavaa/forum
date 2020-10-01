@@ -8,15 +8,23 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+let authorizations = require('./authorizations');
+
 // Global aar zarim function zarlah yed ene zamaar
-Vue.prototype.authorize = function(handler) {
+Vue.prototype.authorize = function(...params) {
     // Additional admin privileges.
     // return true; System iin huvid bygdiis zasah erhtei bolno
 
-    let user = window.App.user;
+    if (! window.App.signedIn) return false;
 
-    return user ? handler(user) : false;
+    if (typeof params[0] === 'string') {
+        return authorizations[params[0]](params[1]);  // authorize('foo', 'bar')
+    }
+
+    return params[0](window.App.user);
 };
+
+Vue.prototype.signedIn = window.App.signedIn;
 
 Vue.component('flash', require('./components/Flash.vue').default);
 Vue.component('paginator', require('./components/Paginator.vue').default);

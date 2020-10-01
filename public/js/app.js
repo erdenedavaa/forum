@@ -2170,11 +2170,13 @@ __webpack_require__.r(__webpack_exports__);
       body: ''
     };
   },
-  computed: {
-    signedIn: function signedIn() {
-      return window.App.signedIn;
-    }
-  },
+  //
+  // computed: {
+  //     signedIn() {
+  //         return window.App.signedIn;
+  //     }
+  // },
+  // app.js deer vue.prototype.signedIn geed zaagaad ugchihsun tul hereggui.
   mounted: function mounted() {
     var tribute = new tributejs__WEBPACK_IMPORTED_MODULE_0___default.a({
       // column to search against in the object (accepts function or string)
@@ -2421,23 +2423,18 @@ __webpack_require__.r(__webpack_exports__);
       id: this.data.id,
       body: this.data.body,
       isDeleted: false,
-      isBest: false
+      isBest: false,
+      reply: this.data
     };
   },
   computed: {
     ago: function ago() {
       return moment__WEBPACK_IMPORTED_MODULE_1___default()(this.data.created_at).fromNow() + '...';
-    },
-    signedIn: function signedIn() {
-      return window.App.signedIn;
-    },
-    canUpdate: function canUpdate() {
-      var _this = this;
+    } // signedIn() {
+    //     return window.App.signedIn;
+    // }
+    // app.js deer VUe.prototype deer zaagaad ugsun tul global bolchij bga ium shig bn.
 
-      return this.authorize(function (user) {
-        return _this.data.user_id == user.id;
-      }); // return this.data.user_id == window.App.user.id;
-    }
   },
   methods: {
     update: function update() {
@@ -60488,7 +60485,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-footer d-flex" }, [
-          _vm.canUpdate
+          _vm.authorize("updateReply", _vm.reply)
             ? _c("div", [
                 _c(
                   "button",
@@ -72809,15 +72806,28 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); // Global aar zarim function zarlah yed ene zamaar
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
-Vue.prototype.authorize = function (handler) {
+var authorizations = __webpack_require__(/*! ./authorizations */ "./resources/js/authorizations.js"); // Global aar zarim function zarlah yed ene zamaar
+
+
+Vue.prototype.authorize = function () {
   // Additional admin privileges.
   // return true; System iin huvid bygdiis zasah erhtei bolno
-  var user = window.App.user;
-  return user ? handler(user) : false;
+  if (!window.App.signedIn) return false;
+
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
+  }
+
+  if (typeof params[0] === 'string') {
+    return authorizations[params[0]](params[1]); // authorize('foo', 'bar')
+  }
+
+  return params[0](window.App.user);
 };
 
+Vue.prototype.signedIn = window.App.signedIn;
 Vue.component('flash', __webpack_require__(/*! ./components/Flash.vue */ "./resources/js/components/Flash.vue")["default"]);
 Vue.component('paginator', __webpack_require__(/*! ./components/Paginator.vue */ "./resources/js/components/Paginator.vue")["default"]);
 Vue.component('user-notifications', __webpack_require__(/*! ./components/UserNotifications.vue */ "./resources/js/components/UserNotifications.vue")["default"]);
@@ -72844,6 +72854,29 @@ window.flash = function (message) {
 var app = new Vue({
   el: '#app'
 });
+
+/***/ }),
+
+/***/ "./resources/js/authorizations.js":
+/*!****************************************!*\
+  !*** ./resources/js/authorizations.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var user = window.App.user; // let authorizations = {
+//     updateReply(reply) {
+//         return reply.user_id === user.id;
+//     }
+// };
+//
+// module.exports = authorizations;
+
+module.exports = {
+  updateReply: function updateReply(reply) {
+    return reply.user_id === user.id;
+  }
+};
 
 /***/ }),
 

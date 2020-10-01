@@ -35,7 +35,7 @@
             </div>
 
             <div class="card-footer d-flex">
-                <div v-if="canUpdate">
+                <div v-if="authorize('updateReply', reply)">
                     <button class="btn btn-secondary btn-sm mr-2" @click="editing = true">Edit</button>
                     <button class="btn btn-danger btn-sm mr-2" @click="destroy">Delete</button>
                 </div>
@@ -63,7 +63,8 @@
                 id: this.data.id,
                 body: this.data.body,
                 isDeleted: false,
-                isBest: false
+                isBest: false,
+                reply: this.data
             };
         },
 
@@ -72,14 +73,12 @@
                 return moment(this.data.created_at).fromNow() + '...';
             },
 
-            signedIn() {
-                return window.App.signedIn;
-            },
+            // signedIn() {
+            //     return window.App.signedIn;
+            // }
+            // app.js deer VUe.prototype deer zaagaad ugsun tul global bolchij bga ium shig bn.
 
-            canUpdate() {
-                return this.authorize(user => this.data.user_id == user.id);
-                // return this.data.user_id == window.App.user.id;
-            }
+
         },
 
         methods: {

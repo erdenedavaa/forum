@@ -34,12 +34,13 @@ export default {
             body: ''
         };
     },
-
-    computed: {
-        signedIn() {
-            return window.App.signedIn;
-        }
-    },
+    //
+    // computed: {
+    //     signedIn() {
+    //         return window.App.signedIn;
+    //     }
+    // },
+    // app.js deer vue.prototype.signedIn geed zaagaad ugchihsun tul hereggui.
 
     mounted() {
         let tribute = new Tribute({
