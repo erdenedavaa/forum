@@ -20,5 +20,11 @@ module.exports = {
 
     owns (model, prop = 'user_id') {
         return model[prop] === user.id;
+    },
+
+    isAdmin() {
+        return ['Ongoo', 'JohnDoe', 'JaneDoe'].includes(user.name);
+        // Array нь auth user name агуулсан байна уу шалгаж байна,
+        // хэрвээ агуулж байвал there a admin (if so)
     }
 };

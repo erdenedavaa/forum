@@ -4,14 +4,15 @@ import SubscribeButton from '../components/SubscribeButton.vue';
 
 export default {
     // name: "Thread",
-    props: ['initialRepliesCount'],
+    props: ['dataRepliesCount', 'dataLocked'],
 
     components: {Replies, SubscribeButton},
     // ene bol child component
 
     data() {
         return {
-            repliesCount: this.initialRepliesCount
+            repliesCount: this.dataRepliesCount,
+            locked: this.dataLocked
         }
     },
 }

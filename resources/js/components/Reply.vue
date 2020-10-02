@@ -40,7 +40,7 @@
                     <button class="btn btn-danger btn-sm mr-2" @click="destroy">Delete</button>
                 </div>
 
-                <button class="btn btn-sm ml-auto" @click="markBestReply" v-if="authorize('owns', reply.thread)">Best Reply?</button>
+                <button class="btn btn-light btn-sm ml-auto" @click="markBestReply" v-if="authorize('owns', reply.thread)">Best Reply?</button>
 <!--                // reply.thread нь pass through the component, then access to it.-->
 <!--                // $reply->thread гэсэнтэй ижил, ойролцоо -->
             </div>

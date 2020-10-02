@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <thread-view :initial-replies-count="{{ $thread->replies_count }}" inline-template>
+    <thread-view :data-replies-count="{{ $thread->replies_count }}" :data-locked="{{ $thread->locked }}" inline-template>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-md-5">
                         <div class="card-header d-flex justify-content-between">
-
 
                             <div class="d-flex align-items-center">
                                 <img src="{{ $thread->creator->avatar_path }}" alt="{{ $thread->creator->name }}" width="25" height="25" class="mr-1">
@@ -52,7 +51,9 @@
                             </p>
 
                             <p>
-                                <subscribe-button :active="{{ json_encode($thread->isSubscribedTo) }}"></subscribe-button>
+                                <subscribe-button :active="{{ json_encode($thread->isSubscribedTo) }}" v-if="signedIn"></subscribe-button>
+
+                                <button class="btn btn-light" v-if="authorize('isAdmin') && ! locked" @click="locked = true">Lock</button>
                             </p>
                         </div>
                     </div>

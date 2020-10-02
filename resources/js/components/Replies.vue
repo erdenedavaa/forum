@@ -7,7 +7,12 @@
         <paginator :dataSet="dataSet" @changed="fetch"></paginator>
         <!-- dataset is updated and cascade down to paginator -->
 
-        <new-reply @created="add"></new-reply>
+        <p v-if="$parent.locked">
+            This thread has been locked. No more replies are allowed.
+        </p>
+        <new-reply @created="add" v-else></new-reply>
+<!--        <new-reply @created="add" v-if="! $parent.locked"></new-reply>-->
+        <!--  parent нь not locked үед харагдана. display the form to create new reply       -->
     </div>
 </template>
 
