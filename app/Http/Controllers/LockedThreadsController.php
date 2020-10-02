@@ -15,6 +15,16 @@
 //                return response('You do not have permission to lock this thread.', 403);
 //            }
 
-            $thread->lock();
+//            $thread->lock();
+            // Laravel uuriin lock methodtoi tul ergelzee yysch bolno
+            // дээрхийг дараах байдлаар шууд хийж болно
+            $thread->update(['locked' => true]);
+        }
+
+        public function destroy(Thread $thread)
+        {
+//            $thread->unlock();
+            $thread->update(['locked' => false]);
+
         }
     }

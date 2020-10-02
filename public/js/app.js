@@ -2598,7 +2598,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   // name: "Thread",
-  props: ['dataRepliesCount', 'dataLocked'],
+  props: ['thread'],
   components: {
     Replies: _components_Replies__WEBPACK_IMPORTED_MODULE_0__["default"],
     SubscribeButton: _components_SubscribeButton_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2606,9 +2606,18 @@ __webpack_require__.r(__webpack_exports__);
   // ene bol child component
   data: function data() {
     return {
-      repliesCount: this.dataRepliesCount,
-      locked: this.dataLocked
+      repliesCount: this.thread.replies_count,
+      // this is coming from eloquent query results
+      locked: this.thread.locked
     };
+  },
+  methods: {
+    toggleLock: function toggleLock() {
+      // axios.post('/locked-threads/' + this.thread.slug);
+      // toggle hiij bga tul deerhiig daraah baidlaar hiine
+      axios[this.locked ? 'delete' : 'post']('/locked-threads/' + this.thread.slug);
+      this.locked = !this.locked;
+    }
   }
 });
 
@@ -60545,7 +60554,7 @@ var render = function() {
                 ? _c(
                     "button",
                     {
-                      staticClass: "btn btn-light btn-sm ml-auto",
+                      staticClass: "btn btn-outline-primary btn-sm ml-auto",
                       on: { click: _vm.markBestReply }
                     },
                     [_vm._v("Best Reply?")]

@@ -16,6 +16,10 @@ class Thread extends Model
 
     protected $appends = ['isSubscribedTo'];
 
+    protected $casts = [
+        'locked' => 'boolean'
+    ];
+
     protected static function boot()
     {
         parent::boot();
@@ -75,10 +79,16 @@ class Thread extends Model
         return $reply;
     }
 
-    public function lock()
-    {
-        $this->update(['locked' => true]);
-    }
+    // LockThreadsController дээр хялбарчилал хийсэн тул устгав
+//    public function lock()
+//    {
+//        $this->update(['locked' => true]);
+//    }
+//
+//    public function unlock()
+//    {
+//        $this->update(['locked' => false]);
+//    }
 
 //    public function notifySubscribers($reply)
 //    {

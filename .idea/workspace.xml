@@ -22,17 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/authorizations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/authorizations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/Thread.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Thread.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +197,7 @@
       <recent name="$PROJECT_DIR$/public/storage/avatars" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.LockThreadsTest">
+  <component name="RunManager" selected="PHPUnit.LockThreadsTest.administrator_can_unlock_threads">
     <configuration name="LockThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" scope="Class" />
       <method v="2" />
@@ -216,8 +206,8 @@
       <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="administrator_can_lock_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LockThreadsTest.an_administrator_can_lock_any_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="an_administrator_can_lock_any_thread" scope="Method" />
+    <configuration name="LockThreadsTest.administrator_can_unlock_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="administrator_can_unlock_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="LockThreadsTest.non_administrator_may_not_lock_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -234,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.LockThreadsTest.administrator_can_unlock_threads" />
+        <item itemvalue="PHPUnit.LockThreadsTest.administrator_can_lock_threads" />
         <item itemvalue="PHPUnit.LockThreadsTest" />
         <item itemvalue="PHPUnit.LockThreadsTest.once_locked_a_thread_may_not_receive_new_replies" />
-        <item itemvalue="PHPUnit.LockThreadsTest.administrator_can_lock_threads" />
         <item itemvalue="PHPUnit.LockThreadsTest.non_administrator_may_not_lock_threads" />
-        <item itemvalue="PHPUnit.LockThreadsTest.an_administrator_can_lock_any_thread" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +249,7 @@
       <workItem from="1601389389247" duration="6962000" />
       <workItem from="1601469149256" duration="7518000" />
       <workItem from="1601542181680" duration="164000" />
-      <workItem from="1601542457218" duration="20345000" />
+      <workItem from="1601542457218" duration="23543000" />
     </task>
     <servers />
   </component>
@@ -340,26 +330,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601649303245">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601655497924">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601649303245">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601655497924" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601655497924">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601649303244">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601655497924" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601655497923">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303244" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601649303245">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601655497923" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601655497924">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601655497924" />
     <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -394,11 +384,11 @@
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
     <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1601647381715" />
-    <state width="584" height="469" key="SwitcherDM" timestamp="1601650438868">
+    <state width="584" height="469" key="SwitcherDM" timestamp="1601655464370">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600707601070" />
-    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601650438868" />
+    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601655464370" />
     <state x="673" y="249" width="919" height="680" key="find.popup" timestamp="1601569310251">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -408,11 +398,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601651169474">
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601655615402">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600707270248" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601651169474" />
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601655615402" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
