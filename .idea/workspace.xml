@@ -23,14 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5252370-78c1-4d1f-9049-4429230abd49" name="Default Changelist" comment="j">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/LockThreads.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LockedThreadsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Administrator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_105735_create_threads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_17_105735_create_threads_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/dump.rdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LockThreads.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,25 +208,25 @@
       <recent name="$PROJECT_DIR$/public/storage/avatars" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.LockThreads.an_administrator_can_lock_any_thread">
-    <configuration name="BestReplyTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\BestReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/BestReplyTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.LockThreadsTest">
+    <configuration name="LockThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="BestReplyTest.if_a_best_reply_is_deleted_then_the_thread_is_properly_updated_to_reflect_that" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\BestReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/BestReplyTest.php" method="if_a_best_reply_is_deleted_then_the_thread_is_properly_updated_to_reflect_that" scope="Method" />
+    <configuration name="LockThreadsTest.administrator_can_lock_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="administrator_can_lock_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LockThreads.an_administrator_can_lock_any_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LockThreads" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreads.php" method="an_administrator_can_lock_any_thread" scope="Method" />
+    <configuration name="LockThreadsTest.an_administrator_can_lock_any_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="an_administrator_can_lock_any_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" scope="Class" />
+    <configuration name="LockThreadsTest.non_administrator_may_not_lock_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="non_administrator_may_not_lock_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadTest.a_thread_may_be_locked" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ThreadTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ThreadTest.php" method="a_thread_may_be_locked" scope="Method" />
+    <configuration name="LockThreadsTest.once_locked_a_thread_may_not_receive_new_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LockThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LockThreadsTest.php" method="once_locked_a_thread_may_not_receive_new_replies" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -233,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.LockThreads.an_administrator_can_lock_any_thread" />
-        <item itemvalue="PHPUnit.ThreadTest.a_thread_may_be_locked" />
-        <item itemvalue="PHPUnit.ThreadTest" />
-        <item itemvalue="PHPUnit.BestReplyTest.if_a_best_reply_is_deleted_then_the_thread_is_properly_updated_to_reflect_that" />
-        <item itemvalue="PHPUnit.BestReplyTest" />
+        <item itemvalue="PHPUnit.LockThreadsTest" />
+        <item itemvalue="PHPUnit.LockThreadsTest.once_locked_a_thread_may_not_receive_new_replies" />
+        <item itemvalue="PHPUnit.LockThreadsTest.administrator_can_lock_threads" />
+        <item itemvalue="PHPUnit.LockThreadsTest.non_administrator_may_not_lock_threads" />
+        <item itemvalue="PHPUnit.LockThreadsTest.an_administrator_can_lock_any_thread" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +260,7 @@
       <workItem from="1601389389247" duration="6962000" />
       <workItem from="1601469149256" duration="7518000" />
       <workItem from="1601542181680" duration="164000" />
-      <workItem from="1601542457218" duration="13665000" />
+      <workItem from="1601542457218" duration="18012000" />
     </task>
     <servers />
   </component>
@@ -304,10 +306,11 @@
     </state>
     <state x="648" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1598620927543" />
     <state x="756" y="235" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601019449877" />
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600359313120">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="569" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601645322311">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1600359313120" />
+    <state x="569" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1601645322311" />
     <state x="716" y="257" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601383143213">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -338,26 +341,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="544" y="247" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1597739948705" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601571332634">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom" timestamp="1601649303245">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600707468770" />
-    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601571332634" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601571332634">
+    <state width="1398" height="726" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
+    <state width="1398" height="726" key="GridCell.Tab.0.center" timestamp="1601649303245">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601571332634" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601571332633">
+    <state width="1398" height="726" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
+    <state width="1398" height="726" key="GridCell.Tab.0.left" timestamp="1601649303244">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601571332633" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601571332634">
+    <state width="1398" height="726" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303244" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right" timestamp="1601649303245">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600707468769" />
-    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601571332634" />
+    <state width="1398" height="726" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1601649303245" />
     <state width="1140" height="349" key="GridCell.Tab.1.bottom" timestamp="1601019473662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -387,16 +390,16 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1598693541512" />
-    <state x="525" y="230" width="630" height="614" key="StructurePopup" timestamp="1601570686521">
+    <state x="525" y="230" width="630" height="614" key="StructurePopup" timestamp="1601647381715">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1600609864255" />
-    <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1601570686521" />
-    <state width="584" height="469" key="SwitcherDM" timestamp="1601570677807">
+    <state x="525" y="230" width="630" height="614" key="StructurePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1601647381715" />
+    <state width="584" height="469" key="SwitcherDM" timestamp="1601648506362">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1600707601070" />
-    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601570677807" />
+    <state width="584" height="469" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1601648506362" />
     <state x="673" y="249" width="919" height="680" key="find.popup" timestamp="1601569310251">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -406,11 +409,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="660" y="251" key="refactoring.ChangeSignatureDialog/0.23.1440.877@0.23.1440.877" timestamp="1598887527378" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601569615674">
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup" timestamp="1601647908715">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1600707270248" />
-    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601569615674" />
+    <state x="449" y="245" width="782" height="792" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1601647908715" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

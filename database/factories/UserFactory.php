@@ -37,6 +37,16 @@ $factory->state(App\User::class, 'unconfirmed', function() {
     ];
 });
 
+$factory->state(App\User::class, 'administrator', function() {
+    return [
+        'name' => 'Ongoo'
+
+        //  эсвэл дараах байдлаар хийж болно
+        // is_admin column үүсгээд үүнд утга онооно
+//        'is_admin' = true
+    ];
+});
+
 $factory->define(App\Thread::class, function($faker) {
     $title = $faker->sentence;
 

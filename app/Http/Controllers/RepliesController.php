@@ -36,6 +36,7 @@ class RepliesController extends Controller
             'user_id' => auth()->id()
         ])->load('owner');
 
+        // Энгийн байлгах үүднээс хуучинд нь дээрхээр буцаав
 //        try {
 //            return $thread->addReply([
 //                'body' => request('body'),
