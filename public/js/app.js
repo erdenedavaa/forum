@@ -60550,7 +60550,7 @@ var render = function() {
                   ])
                 : _vm._e(),
               _vm._v(" "),
-              _vm.authorize("owns", _vm.reply.thread)
+              _vm.authorize("owns", _vm.reply.thread) && !_vm.isBest
                 ? _c(
                     "button",
                     {
