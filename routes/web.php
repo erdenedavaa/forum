@@ -27,6 +27,7 @@
     Route::post('threads', 'ThreadsController@store')->middleware('must-be-confirmed');
     Route::get('threads/{channel}', 'ThreadsController@index');
     Route::get('threads/{channel}/{thread}', 'ThreadsController@show');
+    Route::patch('threads/{channel}/{thread}', 'ThreadsController@update');
 
 //    Route::patch('threads/{channel}/{thread}', 'ThreadsController@update')->name('threads.update');
     Route::post('locked-threads/{thread}', 'LockedThreadsController@store')->name('locked-threads.store')->middleware

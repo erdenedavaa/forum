@@ -114,6 +114,22 @@
             return view('threads.show', compact('thread'));
         }
 
+        public function update($channel, Thread $thread)
+        {
+            // this authorize-ийн update policy-г $thread дээр хэрэгжүүлнэ гэсэн утгатай
+            $this->authorize('update', $thread);
+
+            // $thread->update(request(['body', 'title'])); // thread update hiihed 'title', 'body' хоёул хэрэгтэй
+            // гэдгийг батлах зорилгоор оруулж үзсэн
+
+            $thread->update(request()->validate([
+                'title' => 'required|spamfree',
+                'body'  => 'required|spamfree'
+            ]));
+
+            return $thread;
+        }
+
         /**
          * Show the form for editing the specified resource.
          *
