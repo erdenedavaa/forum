@@ -1,5 +1,33 @@
 @extends('layouts.app')
 
+@section('head')
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("input").submit();
+        }
+    </script>
+
+{{--    --}}{{-- RECAPTCHA start --}}
+{{--    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>--}}
+{{--    <script>--}}
+{{--        function onClick(e) {  // байгаагүй, гэхдээ сүүлд нэмсэн--}}
+{{--            e.preventDefault(); // байгаагүй, гэхдээ сүүлд нэмсэн--}}
+{{--            grecaptcha.ready(function () {--}}
+{{--                grecaptcha.execute('{{ config('services.recaptcha.sitekey') }}', {action: 'submit'}).then(function (token) {--}}
+{{--                    if (token) {--}}
+{{--                        document.getElementById('recaptcha').value = token;--}}
+{{--                    }--}}
+{{--                });--}}
+{{--            });--}}
+{{--        } // байгаагүй, гэхдээ сүүлд нэмсэн--}}
+{{--    </script>--}}
+{{--    --}}{{-- RECAPTCHA end --}}
+
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -8,7 +36,7 @@
                     <div class="card-header">Create a New Thread</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/threads">
+                        <form method="POST" action="/threads" id="input">
                             @csrf
 
                             <div class="form-group">
@@ -35,7 +63,12 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Publish</button>
+{{--                                <button type="submit" class="btn btn-primary">Publish</button>--}}
+
+                                <button class="btn btn-primary g-recaptcha"
+                                        data-sitekey="6LfMBNMZAAAAAOFtPemM5rHGryG-kXHjUVIzbKuK"
+                                        data-callback='onSubmit'
+                                        data-action='submit'>Publish</button>
                             </div>
 
                             @if (count($errors))
@@ -45,6 +78,11 @@
                                     @endforeach
                                 </ul>
                             @endif
+
+
+{{--                            --}}{{-- RECAPTCHA start --}}
+{{--                            <input type="hidden" name="recaptcha" id="recaptcha">--}}
+{{--                            --}}{{-- RECAPTCHA end --}}
                         </form>
 
                     </div>

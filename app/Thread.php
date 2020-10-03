@@ -90,8 +90,8 @@ class Thread extends Model
 //        $this->update(['locked' => false]);
 //    }
 
-//    public function notifySubscribers($reply)
-//    {
+   // public function notifySubscribers($reply)
+   // {
 //        $this->subscriptions
 //            ->where('user_id', '!=', $reply->user_id)
 //            ->each

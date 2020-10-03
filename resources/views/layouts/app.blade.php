@@ -30,6 +30,8 @@
 <!-- deerhiig daraah baidlaar mix tei bichij bolno -->
 {{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
     <script defer src="{{ mix('js/app.js') }}"></script>
+
+    @yield('head')
 </head>
 <body style="padding-bottom: 100px;">
 <div id="app">
