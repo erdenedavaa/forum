@@ -61,12 +61,12 @@
          * @param \App\Rules\Recaptcha $recaptcha
          * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
          */
-        public function store(Request $request, Recaptcha $recaptcha)
+        public function store(Recaptcha $recaptcha)
         {
             // dd($request->all());
             // Үүгээр google recaptcha гийн frontside -аас код ирсэн нь харагдана (g-recaptcha-response)
 
-            $request->validate([
+            request()->validate([
                 'title'                => 'required|spamfree',
                 'body'                 => 'required|spamfree',
                 'channel_id'           => 'required|exists:channels,id',

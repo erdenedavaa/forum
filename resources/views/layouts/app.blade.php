@@ -30,6 +30,9 @@
 <!-- deerhiig daraah baidlaar mix tei bichij bolno -->
 {{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
     <script defer src="{{ mix('js/app.js') }}"></script>
+    <style>
+        [v-cloak] { display: none }
+    </style>
 
     @yield('head')
 </head>

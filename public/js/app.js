@@ -2608,7 +2608,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       repliesCount: this.thread.replies_count,
       // this is coming from eloquent query results
-      locked: this.thread.locked
+      locked: this.thread.locked,
+      editing: false
     };
   },
   methods: {
