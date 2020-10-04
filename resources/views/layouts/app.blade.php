@@ -31,7 +31,8 @@
 {{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
     <script defer src="{{ mix('js/app.js') }}"></script>
     <style>
-        [v-cloak] { display: none }
+        [v-cloak] > * { display:none; }
+        [v-cloak]::before { content: "loading..."; }
     </style>
 
     @yield('head')

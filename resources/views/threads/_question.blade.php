@@ -2,28 +2,28 @@
 <div class="card mb-md-5" v-if="editing">
     <div class="card-header ">
 
-        <input type="text" value="{{ $thread->title }}" class="form-control">
+        <input type="text" class="form-control" v-model="form.title">
 
 
     </div>
 
     <div class="card-body">
         <div class="form-group">
-            <textarea class="form-control" rows="10">{{ $thread->body }}</textarea>
+            <textarea class="form-control" rows="10" v-model="form.body"></textarea>
         </div>
     </div>
 
     <div class="card-footer d-flex justify-content-between">
         <button class="btn btn-outline-primary btn-sm mr-2" @click="editing = true" v-show="! editing">Edit</button>
-        <button class="btn btn-primary btn-sm mr-2">Update</button>
-        <button class="btn btn-outline-primary btn-sm" @click="editing = false">Cancel</button>
+        <button class="btn btn-primary btn-sm mr-2" @click="update">Update</button>
+        <button class="btn btn-outline-primary btn-sm" @click="resetForm">Cancel</button>
 
         @can ('update', $thread)
             <form action="{{ $thread->path() }}" method="POST" class="ml-auto">
                 @csrf
                 {{ method_field('DELETE') }}
 
-                <button type="submit" class="btn btn-danger">Delete Thread</button>
+                <button type="submit" class="btn btn-danger btn-sm">Delete Thread</button>
             </form>
         @endcan
     </div>
@@ -40,18 +40,18 @@
                  height="25"
                  class="mr-1">
 
-            <a href="{{ route('profile', $thread->creator) }}"
-               class="pr-1">{{ $thread->creator->name }}</a> posted:
-            {{ $thread->title }}
+            <span>
+                <a href="{{ route('profile', $thread->creator) }}" class="pr-1">{{ $thread->creator->name }}</a> posted:
+                <span v-text="title"></span>
+            </span>
+
         </div>
 
     </div>
 
-    <div class="card-body">
-        {{ $thread->body }}
-    </div>
+    <div class="card-body" v-text="body"></div>
 
-    <div class="card-footer">
+    <div class="card-footer" v-if="authorize('owns', thread)">
         <button class="btn btn-outline-primary btn-sm" @click="editing = true">Edit</button>
     </div>
 </div>
