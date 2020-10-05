@@ -8,6 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import InstantSearch from 'vue-instantsearch';
+
+Vue.use(InstantSearch);
+
+
+
 let authorizations = require('./authorizations');
 
 // Global aar zarim function zarlah yed ene zamaar
@@ -31,6 +37,10 @@ Vue.component('paginator', require('./components/Paginator.vue').default);
 Vue.component('user-notifications', require('./components/UserNotifications.vue').default);
 Vue.component('avatar-form', require('./components/AvatarForm.vue').default);
 
+// Algolia example START
+Vue.component('my-search', require('./components/MySearch.vue').default);
+// Algolia example END
+
 Vue.component('thread-view', require('./pages/Thread.vue').default);
 // Bolohgui zunduu udsanii daraa .default nemsen chin bolchloo
 
@@ -47,5 +57,5 @@ window.flash = function (message, level = 'success') {
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
 });

@@ -30,6 +30,13 @@
 <!-- deerhiig daraah baidlaar mix tei bichij bolno -->
 {{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
     <script defer src="{{ mix('js/app.js') }}"></script>
+
+{{--    Algolia Start --}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/vue-instantsearch@3.0.3/dist/vue-instantsearch.js" integrity="sha256-8RxtmDcLI0MppUbZmtPAbljybngiUe3fWODdCvjTdFo=" crossorigin="anonymous"></script>--}}
+
+    {{--    Algolia End --}}
+
     <style>
         [v-cloak] > * { display:none; }
         [v-cloak]::before { content: "loading..."; }

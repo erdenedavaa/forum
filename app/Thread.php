@@ -174,4 +174,14 @@ class Thread extends Model
     {
         $this->update(['best_reply_id' => $reply->id]);
     }
+
+    public function toSearchableArray()
+    {
+        // Үүгээр зөвхөн title -ууд pass
+        // return ['title' => $this->title];
+
+        return $this->toArray() + ['path' => $this->path()];
+    }
+
+
 }
