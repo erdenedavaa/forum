@@ -1,27 +1,36 @@
 <template>
     <div>
-        <header class="header">
-            <h1 class="header-title"><a href="/">Vue InstantSearch v2 starter</a></h1>
-            <p class="header-subtitle">
-                using
-                <a href="https://github.com/algolia/vue-instantsearch">
-                    Vue InstantSearch
-                </a>
-            </p>
-        </header>
+<!--        <header class="header">-->
+<!--            <h1 class="header-title"><a href="/">Vue InstantSearch v2 starter</a></h1>-->
+<!--            <p class="header-subtitle">-->
+<!--                using-->
+<!--                <a href="https://github.com/algolia/vue-instantsearch">-->
+<!--                    Vue InstantSearch-->
+<!--                </a>-->
+<!--            </p>-->
+<!--        </header>-->
 
         <div class="container">
             <ais-instant-search
                 :search-client="searchClient"
                 index-name="threads"
             >
+                <ais-configure
+                    :distinct="true"
+                    :analytics="false"
+                    :enable-personalization.camel="true"
+                    query="{ request }"
+                />
+
+
+                <!--                <ais-configure :title="ongoo" /> ajillahgui bn bi uuruu zohiov-->
                 <div class="search-panel">
-                    <div class="search-panel__filters">
-                        <ais-refinement-list attribute="channel.name" searchable />
-                    </div>
+<!--                    <div class="search-panel__filters">-->
+<!--                        <ais-refinement-list attribute="channel.name" searchable />-->
+<!--                    </div>-->
 
                     <div class="search-panel__results">
-                        <ais-search-box placeholder="Search here…" class="searchbox" />
+<!--                        <ais-search-box placeholder="Search here…" class="searchbox" />-->
                         <ais-hits>
                             <template slot="item" slot-scope="{ item }">
                                 <p>
@@ -30,7 +39,7 @@
                                     </a>
                                 </p>
 <!--                                <h1 v-text="item.name"></h1>-->
-                                <p><ais-highlight :hit="item" attribute="description" /></p>
+<!--                                <p><ais-highlight :hit="item" attribute="body" /></p>-->
                             </template>
                         </ais-hits>
 
@@ -112,12 +121,12 @@ body {
 }
 
 .search-panel__filters {
-    flex: 1;
+    /*flex: 1;*/
     margin-right: 1em;
 }
 
 .search-panel__results {
-    flex: 3;
+    /*flex: 3;*/
 }
 
 .searchbox {

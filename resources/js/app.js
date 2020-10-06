@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import algoliasearch from "algoliasearch/lite";
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -13,15 +15,14 @@ import InstantSearch from 'vue-instantsearch';
 Vue.use(InstantSearch);
 
 
-
 let authorizations = require('./authorizations');
 
 // Global aar zarim function zarlah yed ene zamaar
-Vue.prototype.authorize = function(...params) {
+Vue.prototype.authorize = function (...params) {
     // Additional admin privileges.
     // return true; System iin huvid bygdiis zasah erhtei bolno
 
-    if (! window.App.signedIn) return false;
+    if (!window.App.signedIn) return false;
 
     if (typeof params[0] === 'string') {
         return authorizations[params[0]](params[1]);  // authorize('foo', 'bar')
@@ -47,7 +48,7 @@ Vue.component('thread-view', require('./pages/Thread.vue').default);
 window.events = new Vue();
 
 window.flash = function (message, level = 'success') {
-    window.events.$emit('flash', { message, level });
+    window.events.$emit('flash', {message, level});
 } // flash('my new flash message')
 
 /**
@@ -58,4 +59,11 @@ window.flash = function (message, level = 'success') {
 
 const app = new Vue({
     el: '#app',
+
+    data: {
+        searchClient: algoliasearch(
+            'VLUG7C20ZQ',
+            'd928962683cba0bd2285df417b71c9ca'
+        )
+    }
 });

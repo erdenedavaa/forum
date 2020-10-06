@@ -7390,6 +7390,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12395,7 +12404,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body,\nh1 {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,\n    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\n}\n.header {\n  display: flex;\n  align-items: center;\n  min-height: 50px;\n  padding: 0.5rem 1rem;\n  background-image: linear-gradient(to right, #4dba87, #2f9088);\n  color: #fff;\n  margin-bottom: 1rem;\n}\n.header a {\n  color: #fff;\n  text-decoration: none;\n}\n.header-title {\n  font-size: 1.2rem;\n  font-weight: normal;\n}\n.header-title::after {\n  content: ' \\25B8   ';\n  padding: 0 0.5rem;\n}\n.header-subtitle {\n  font-size: 1.2rem;\n  margin-bottom: 0;\n  margin-left: auto;\n}\n.container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 1rem;\n}\n.search-panel {\n  display: flex;\n}\n.search-panel__filters {\n  flex: 1;\n  margin-right: 1em;\n}\n.search-panel__results {\n  flex: 3;\n}\n.searchbox {\n  margin-bottom: 2rem;\n}\n.pagination {\n  margin: 2rem auto;\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "body,\nh1 {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,\n    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\n}\n.header {\n  display: flex;\n  align-items: center;\n  min-height: 50px;\n  padding: 0.5rem 1rem;\n  background-image: linear-gradient(to right, #4dba87, #2f9088);\n  color: #fff;\n  margin-bottom: 1rem;\n}\n.header a {\n  color: #fff;\n  text-decoration: none;\n}\n.header-title {\n  font-size: 1.2rem;\n  font-weight: normal;\n}\n.header-title::after {\n  content: ' \\25B8   ';\n  padding: 0 0.5rem;\n}\n.header-subtitle {\n  font-size: 1.2rem;\n  margin-bottom: 0;\n  margin-left: auto;\n}\n.container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 1rem;\n}\n.search-panel {\n  display: flex;\n}\n.search-panel__filters {\n  /*flex: 1;*/\n  margin-right: 1em;\n}\n.search-panel__results {\n  /*flex: 3;*/\n}\n.searchbox {\n  margin-bottom: 2rem;\n}\n.pagination {\n  margin: 2rem auto;\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -78528,8 +78537,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
     _c(
       "div",
       { staticClass: "container" },
@@ -78543,27 +78550,20 @@ var render = function() {
             }
           },
           [
+            _c("ais-configure", {
+              attrs: {
+                distinct: true,
+                analytics: false,
+                enablePersonalization: true,
+                query: "{ request }"
+              }
+            }),
+            _vm._v(" "),
             _c("div", { staticClass: "search-panel" }, [
-              _c(
-                "div",
-                { staticClass: "search-panel__filters" },
-                [
-                  _c("ais-refinement-list", {
-                    attrs: { attribute: "channel.name", searchable: "" }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "search-panel__results" },
                 [
-                  _c("ais-search-box", {
-                    staticClass: "searchbox",
-                    attrs: { placeholder: "Search here…" }
-                  }),
-                  _vm._v(" "),
                   _c("ais-hits", {
                     scopedSlots: _vm._u([
                       {
@@ -78582,17 +78582,7 @@ var render = function() {
                                 ],
                                 1
                               )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              [
-                                _c("ais-highlight", {
-                                  attrs: { hit: item, attribute: "description" }
-                                })
-                              ],
-                              1
-                            )
+                            ])
                           ]
                         }
                       }
@@ -78609,36 +78599,15 @@ var render = function() {
                 1
               )
             ])
-          ]
+          ],
+          1
         )
       ],
       1
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("header", { staticClass: "header" }, [
-      _c("h1", { staticClass: "header-title" }, [
-        _c("a", { attrs: { href: "/" } }, [
-          _vm._v("Vue InstantSearch v2 starter")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "header-subtitle" }, [
-        _vm._v("\n                using\n                "),
-        _c(
-          "a",
-          { attrs: { href: "https://github.com/algolia/vue-instantsearch" } },
-          [_vm._v("\n                    Vue InstantSearch\n                ")]
-        )
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -100264,17 +100233,21 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_instantsearch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-instantsearch */ "./node_modules/vue-instantsearch/es/src/instantsearch.js");
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! algoliasearch/lite */ "./node_modules/algoliasearch/dist/algoliasearch-lite.umd.js");
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(algoliasearch_lite__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_instantsearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-instantsearch */ "./node_modules/vue-instantsearch/es/src/instantsearch.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
-Vue.use(vue_instantsearch__WEBPACK_IMPORTED_MODULE_0__["default"]);
+Vue.use(vue_instantsearch__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 var authorizations = __webpack_require__(/*! ./authorizations */ "./resources/js/authorizations.js"); // Global aar zarim function zarlah yed ene zamaar
 
@@ -100323,7 +100296,10 @@ window.flash = function (message) {
 
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    searchClient: algoliasearch_lite__WEBPACK_IMPORTED_MODULE_0___default()('VLUG7C20ZQ', 'd928962683cba0bd2285df417b71c9ca')
+  }
 });
 
 /***/ }),
