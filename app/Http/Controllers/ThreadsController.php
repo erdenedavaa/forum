@@ -63,7 +63,7 @@
          */
         public function store(Recaptcha $recaptcha)
         {
-            // dd($request->all());
+            // dd(request()->all());
             // Үүгээр google recaptcha гийн frontside -аас код ирсэн нь харагдана (g-recaptcha-response)
 
             request()->validate([

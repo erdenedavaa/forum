@@ -26,6 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/vendor/tribute.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.min.css" rel="stylesheet">
 
 <!-- deerhiig daraah baidlaar mix tei bichij bolno -->
 {{--    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />--}}
