@@ -10,7 +10,7 @@
         <p v-if="$parent.locked">
             This thread has been locked. No more replies are allowed.
         </p>
-        <new-reply @created="add" v-else></new-reply>
+        <new-reply @created="add" class="mt-5" v-else></new-reply>
 <!--        <new-reply @created="add" v-if="! $parent.locked"></new-reply>-->
         <!--  parent нь not locked үед харагдана. display the form to create new reply       -->
     </div>

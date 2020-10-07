@@ -2,13 +2,14 @@
     <div>
         <div v-if="signedIn">
             <div class="form-group">
-                    <textarea name="body"
-                              id="body"
-                              rows="5"
-                              class="form-control"
-                              required
-                              placeholder="Have something to say?"
-                              v-model="body"></textarea>
+                <wysiwyg name="body" v-model="body" placeholder="Have something to say?" :shouldClear="completed"></wysiwyg>
+<!--                    <textarea name="body"-->
+<!--                              id="body"-->
+<!--                              rows="5"-->
+<!--                              class="form-control"-->
+<!--                              required-->
+<!--                              placeholder="Have something to say?"-->
+<!--                              v-model="body"></textarea>-->
             </div>
 
             <button type="submit"
@@ -31,7 +32,8 @@ export default {
 
     data() {
         return {
-            body: ''
+            body: '',
+            completed: false
         };
     },
     //
@@ -67,8 +69,12 @@ export default {
                 })
                 .then( ({data}) => {
                     this.body = '';
+                    this.completed = true; // NewReply has been done, completed gesen utgatai
 
                     flash('Your reply has been posted.');
+
+                    // this trix iin child elemtn ruu shiljij bga tul davharddlaa
+                    // this.$refs.trix.$refs.trix.value = '';
 
                     this.$emit('created', data);
                 });
