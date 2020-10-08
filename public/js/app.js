@@ -7941,6 +7941,7 @@ __webpack_require__.r(__webpack_exports__);
       editing: false,
       title: this.thread.title,
       body: this.thread.body,
+      // $thread->body (in php)
       form: {}
     };
   },

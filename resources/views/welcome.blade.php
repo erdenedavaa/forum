@@ -94,6 +94,12 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                @php
+                    $body = '<script>alert("Hello")</script><h3>Heading with h3</h3><a href="#" title="some anchor" onclick="alert(\'Hello world\')">Click Me</a>';
+                @endphp
+
+                {!! Purify::clean($body) !!}
             </div>
         </div>
     </body>

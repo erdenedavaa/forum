@@ -101,6 +101,8 @@
          */
         public function show($channel, Thread $thread, Trending $trending)
         {
+            // return $thread;  // Laravel cast that to json
+
             if (auth()->check()) {
                 auth()->user()->read($thread);
             }

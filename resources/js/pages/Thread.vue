@@ -16,7 +16,7 @@ export default {
             locked: this.thread.locked,
             editing: false,
             title: this.thread.title,
-            body: this.thread.body,
+            body: this.thread.body, // $thread->body (in php)
             form: {}
         }
     },

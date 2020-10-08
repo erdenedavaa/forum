@@ -157,6 +157,17 @@
             });
         }
 
+        /** @test */
+        function a_thread_body_is_sanitized_automatically()
+        {
+            $thread = make('App\Thread', ['body' => '<script>alert("bad")</script><p>This is ok.</p>']);  // Databased
+            // store hiihgui tul make() hiij bn
+
+            // dd($thread->body);
+
+            $this->assertEquals("<p>This is ok.</p>", $thread->body);
+        }
+
 
 //        /** @test */
 //        function a_thread_records_each_visit()
